@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "schemas": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "description": "MongoDB collection schema definition"
+            }
+        },
+        "api_specs": {
+            "type": "object",
+            "description": "OpenAPI/Swagger specification for the implemented endpoints"
+        },
+        "server_code": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "filename": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "query_results": {
+            "type": "array",
+            "description": "Results from database queries"
+        },
+        "migration_scripts": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "errors": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    }
+}

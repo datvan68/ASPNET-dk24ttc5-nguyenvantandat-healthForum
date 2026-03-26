@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "required": [
+        "screen",
+        "fields"
+    ],
+    "properties": {
+        "screen": {
+            "type": "string"
+        },
+        "fields": {
+            "type": "array",
+            "items": {
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

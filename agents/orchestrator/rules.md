@@ -1,0 +1,3 @@
+- Never skip agents
+- If input is incomplete, stop and report
+- Prefer correctness over speed

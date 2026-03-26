@@ -1,0 +1,56 @@
+{
+  "colors": {
+    "background": {
+      "default": "#f8fafc",
+      "white": "#ffffff",
+      "primaryButton": "#135bec",
+      "dangerLight": "#ffe9e9",
+      "grayLight": "#f0f0f0",
+      "border": "#f1f5f9",
+      "tableBorder": "#f0f2f4",
+      "tableHeader": "rgba(246,246,248,0.3)",
+      "badgeSuccessBg": "#f0fdf4",
+      "badgeDangerBg": "#fef2f2"
+    },
+    "text": {
+      "default": "#111318",
+      "muted": "#616f89",
+      "placeholder": "rgba(10,10,10,0.5)",
+      "danger": "#ff1616",
+      "dangerBadge": "#b91c1c",
+      "successBadge": "#15803d",
+      "white": "#ffffff"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "sans": "Lexend, Inter, Arial, sans-serif",
+      "mono": "Liberation_Mono, monospace"
+    },
+    "sizes": {
+      "xs": "12px",
+      "sm": "14px",
+      "base": "16px"
+    },
+    "weights": {
+      "normal": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+  "spacing": {
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "6": "24px",
+    "10": "40px"
+  },
+  "borderRadius": {
+    "md": "8px",
+    "lg": "10px",
+    "xl": "12px",
+    "2xl": "16px",
+    "full": "9999px"
+  }
+}

@@ -1,0 +1,23 @@
+CREATE DATABASE HealthForumDb;
+GO
+
+USE HealthForumDb;
+GO
+
+CREATE TABLE ForumCategories (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(500) NOT NULL
+);
+GO
+
+CREATE TABLE Topics (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(200) NOT NULL,
+    Content NVARCHAR(MAX) NOT NULL,
+    CategoryId INT NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    CONSTRAINT FK_Topics_ForumCategories
+        FOREIGN KEY (CategoryId) REFERENCES ForumCategories(Id)
+);
+GO
