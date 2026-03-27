@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Phân tích tác động của Magnesium Threonate đối với chất lượng giấc ngủ sâu",
+    "voteCount": 142,
+    "commentCount": 28,
+    "isVerified": true,
+    "authorId": 1,
+    "author": {
+      "fullName": "Dr. Minh Pham",
+      "title": "Dr.",
+      "specialty": "Thận học",
+      "isVerified": true,
+      "imageUrl": "http://localhost:3845/assets/b9875bff8b261f5490bfd213ff4884ebec4a2bac.png"
+    },
+    "createdAt": "2026-03-27T14:14:00Z"
+  },
+  {
+    "id": 2,
+    "title": "Tại sao chỉ số HbA1c quan trọng hơn đường huyết đói trong quản lý tiểu đường?",
+    "voteCount": 89,
+    "commentCount": 15,
+    "isVerified": true,
+    "authorId": 2,
+    "author": {
+      "fullName": "ThS. Linh Nguyen",
+      "title": "ThS.",
+      "specialty": "Dược lâm sàng",
+      "isVerified": true,
+      "imageUrl": "http://localhost:3845/assets/bdb6bb049d220d405b7ab81f738e9c296ffefa80.png"
+    },
+    "createdAt": "2026-03-27T13:00:00Z"
+  }
+]

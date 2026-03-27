@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Dinh dưỡng lâm sàng", "label": "Dinh dưỡng", "imageUrl": "http://localhost:3845/assets/6aca29e9ec0b4f28fd0116cc755514edbf1cca82.png" },
+  { "id": 2, "name": "Thể hình & Cơ sinh học", "label": "Thể hình", "imageUrl": "http://localhost:3845/assets/01400b4cf201a402d5b0c4cce474b3ed4f443710.png" },
+  { "id": 3, "name": "Sức khỏe tâm thần", "label": "Tâm lý", "imageUrl": "http://localhost:3845/assets/66923085341b5b074eb4bb3ef25c7e06ffd15edb.png" },
+  { "id": 4, "name": "Nghiên cứu tuổi thọ", "label": "Tuổi thọ", "imageUrl": "http://localhost:3845/assets/49b8ec2c07739951208814f20853d1afd79f01c3.png" }
+]

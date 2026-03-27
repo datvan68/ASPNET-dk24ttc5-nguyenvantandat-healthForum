@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
+import { LayoutShell } from "@/components/layout/layout-shell";
 
 export const metadata: Metadata = {
   title: "Health Forum",
@@ -12,13 +11,9 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body>
-        <div className="min-h-screen">
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </div>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
+      <body className="antialiased">
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );

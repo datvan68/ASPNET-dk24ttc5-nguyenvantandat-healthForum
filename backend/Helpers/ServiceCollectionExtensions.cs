@@ -9,6 +9,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddSingleton<ForumRepository>();
         services.AddSingleton<HealthService>();
+        services.AddSingleton<IAuthService, AuthService>();
 
         return services;
     }

@@ -3,6 +3,8 @@ using backend.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseUrls("http://localhost:8080");
+
 builder.Services.AddProjectServices();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -22,7 +24,6 @@ var app = builder.Build();
 app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.UseCors("frontend");
-app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();

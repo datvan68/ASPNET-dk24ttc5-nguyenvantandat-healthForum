@@ -1,0 +1,125 @@
+openapi: 3.0.3
+info:
+  title: Health Forum API - Home Page
+  description: API for the Health Forum Home Page (Hero, Stats, QA, Posts, Resources)
+  version: 1.0.0
+
+tags:
+  - name: Posts
+  - name: Experts
+  - name: QA
+  - name: Resources
+  - name: Categories
+
+paths:
+  /v1/stats:
+    get:
+      tags: [Stats]
+      summary: Get global forum statistics
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: "#/components/schemas/Stats"
+  /v1/posts:
+    get:
+      tags: [Posts]
+      summary: Get latest/popular discussions
+      parameters:
+        - name: page
+          in: query
+          schema: { type: integer, default: 1 }
+        - name: pageSize
+          in: query
+          schema: { type: integer, default: 20 }
+        - name: sort
+          in: query
+          schema: { type: string, enum: [newest, popular] }
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PaginatedResponse"
+  /v1/qa/trending:
+    get:
+      tags: [QA]
+      summary: Get trending Q&A spotlights
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/QACard"
+  /v1/resources:
+    get:
+      tags: [Resources]
+      summary: Get medical library resources
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Resource"
+
+components:
+  schemas:
+    Stats:
+      type: object
+      properties:
+        membersCount: { type: string, example: "458k" }
+        postsCount: { type: string, example: "1.2m" }
+        verifiedExpertsPercentage: { type: string, example: "89%" }
+    
+    PaginatedResponse:
+      type: object
+      properties:
+        data: { type: array, items: { type: object } }
+        meta:
+          type: object
+          properties:
+            page: { type: integer }
+            pageSize: { type: integer }
+            total: { type: integer }
+            totalPages: { type: integer }
+
+    QACard:
+      type: object
+      properties:
+        id: { type: integer }
+        question: { type: string }
+        answerSnippet: { type: string }
+        expertName: { type: string }
+        expertTitle: { type: string }
+        expertSpecialty: { type: string }
+        expertAvatar: { type: string }
+        isVerified: { type: boolean }
+
+    Resource:
+      type: object
+      properties:
+        id: { type: integer }
+        title: { type: string }
+        description: { type: string }
+        category: { type: string }
+        fileSize: { type: string }
+        format: { type: string }
+        url: { type: string }

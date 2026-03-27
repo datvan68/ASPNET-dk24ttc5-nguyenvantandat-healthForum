@@ -46,3 +46,9 @@ Hệ thống sử dụng các MCP Servers cục bộ (Figma, GitHub, NotebookLM,
 
 ## 4. Quản lý Môi trường Bảo mật (Environment & Secrets)
 - Tất cả token cá nhân và cấu hình API thật (như *Figma Personal Access Token*, *GitHub Personal Access Token*, *Mật khẩu SQL Server Database*) đều được cô lập ở thư mục môi trường cục bộ (tại `.mcp/figma-config.json` hay `.env`) và đã được khai báo vào `.gitignore` để không bị lộ lọt (push) lên trên GitHub Codebase.
+
+---
+
+## 5. Những Tính Năng Đã Hoàn Thành (Completed Milestones)
+- **Trang Đăng ký (Registration Screen)**: Hoàn thành thiết kế, backend và UI.
+- **Trang Chủ (Home Page)**: Hoàn thành giao diện hoàn chỉnh (Hero, Stats, Roadmap, QA, Clusters, Feed, Library, Events, Partners) tích hợp Header/Footer toàn cục và mock data API.
