@@ -19,6 +19,10 @@ public class Post
     [ForeignKey("AuthorId")]
     public Expert? Author { get; set; }
 
+    public int? CategoryId { get; set; }
+    [ForeignKey("CategoryId")]
+    public Category? Category { get; set; }
+
     public int VoteCount { get; set; } = 0;
     public int CommentCount { get; set; } = 0;
 

@@ -6,8 +6,8 @@ namespace backend.Repositories;
 
 public interface IPostRepository
 {
-    Task<(List<Post> Items, int Total)> GetLatestAsync(int page, int pageSize);
-    Task<(List<Post> Items, int Total)> GetPopularAsync(int page, int pageSize);
+    Task<(List<Post> Items, int Total)> GetLatestAsync(int page, int pageSize, string? category = null);
+    Task<(List<Post> Items, int Total)> GetPopularAsync(int page, int pageSize, string? category = null);
 }
 
 public sealed class PostRepository : IPostRepository
@@ -19,11 +19,17 @@ public sealed class PostRepository : IPostRepository
         _context = context;
     }
 
-    public async Task<(List<Post> Items, int Total)> GetLatestAsync(int page, int pageSize)
+    public async Task<(List<Post> Items, int Total)> GetLatestAsync(int page, int pageSize, string? category = null)
     {
         var query = _context.Posts
             .Include(p => p.Author)
+            .Include(p => p.Category)
             .Where(p => p.DeletedAt == null);
+
+        if (!string.IsNullOrEmpty(category))
+        {
+            query = query.Where(p => p.Category != null && p.Category.Label == category);
+        }
 
         var total = await query.CountAsync();
         var items = await query
@@ -35,11 +41,17 @@ public sealed class PostRepository : IPostRepository
         return (items, total);
     }
 
-    public async Task<(List<Post> Items, int Total)> GetPopularAsync(int page, int pageSize)
+    public async Task<(List<Post> Items, int Total)> GetPopularAsync(int page, int pageSize, string? category = null)
     {
         var query = _context.Posts
             .Include(p => p.Author)
+            .Include(p => p.Category)
             .Where(p => p.DeletedAt == null);
+
+        if (!string.IsNullOrEmpty(category))
+        {
+            query = query.Where(p => p.Category != null && p.Category.Label == category);
+        }
 
         var total = await query.CountAsync();
         var items = await query

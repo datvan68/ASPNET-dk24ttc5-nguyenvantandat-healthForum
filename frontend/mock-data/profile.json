@@ -4,39 +4,39 @@
     "fullName": "Elena Rodriguez",
     "title": "Molecular Biologist",
     "specialty": "Certified Health Sponsor",
-    "avatarUrl": "http://localhost:3845/assets/8cbd9bee88e34e633591ed6b1dd0e976a67f1dac.png",
-    "coverImageUrl": "http://localhost:3845/assets/3df22b4dfa519e2ac4c4f89bc2f89b733f1953a1.png",
+    "avatarUrl": "/assets/8cbd9bee88e34e633591ed6b1dd0e976a67f1dac.png",
+    "coverImageUrl": "/assets/3df22b4dfa519e2ac4c4f89bc2f89b733f1953a1.png",
     "isVerified": true,
     "bio": "Nhà sinh học phân tử & Chiến lược gia chăm sóc sức khỏe. Đam mê nghiên cứu về sự trường thọ và các quy trình dinh dưỡng dựa trên bằng chứng.",
     "location": "Hà Nội, Việt Nam",
-    "locationIconUrl": "http://localhost:3845/assets/1227e95ece0f0b3fdb7ca89f68be1fdce90eaa8b.svg",
-    "joinIconUrl": "http://localhost:3845/assets/5d0e59f721efbdc838736e21c85caf5a6a0082b0.svg",
-    "editIconUrl": "http://localhost:3845/assets/0c8e3a6ff4417f60efac5f065f951e74d3e96529.svg",
+    "locationIconUrl": "/assets/1227e95ece0f0b3fdb7ca89f68be1fdce90eaa8b.svg",
+    "joinIconUrl": "/assets/5d0e59f721efbdc838736e21c85caf5a6a0082b0.svg",
+    "editIconUrl": "/assets/0c8e3a6ff4417f60efac5f065f951e74d3e96529.svg",
     "healthScore": 12480,
     "joinDate": "2023-03-01T00:00:00Z",
     "badges": [
       {
         "id": 1,
         "name": "Bậc thầy nghiên cứu",
-        "iconUrl": "http://localhost:3845/assets/7740b49d833f02b506ef6032ed7477be8b2f1207.svg",
+        "iconUrl": "/assets/7740b49d833f02b506ef6032ed7477be8b2f1207.svg",
         "isEarned": true
       },
       {
         "id": 2,
         "name": "Chuyên gia sinh học",
-        "iconUrl": "http://localhost:3845/assets/01509308d7a1a6610821159eed51db6e70a29224.svg",
+        "iconUrl": "/assets/01509308d7a1a6610821159eed51db6e70a29224.svg",
         "isEarned": true
       },
       {
         "id": 3,
         "name": "Người đánh giá hàng đầu",
-        "iconUrl": "http://localhost:3845/assets/be4bae3119c46f20c0489d0632591ad3dee3a1b4.svg",
+        "iconUrl": "/assets/be4bae3119c46f20c0489d0632591ad3dee3a1b4.svg",
         "isEarned": true
       },
       {
         "id": 4,
         "name": "Người hướng dẫn",
-        "iconUrl": "http://localhost:3845/assets/c292416109fb07332b5943ae0a7a05b5cb2af165.svg",
+        "iconUrl": "/assets/c292416109fb07332b5943ae0a7a05b5cb2af165.svg",
         "isEarned": false
       }
     ]
@@ -50,8 +50,8 @@
       "createdAt": "2026-03-26T10:00:00Z",
       "commentCount": 42,
       "likeCount": 156,
-      "commentIconUrl": "http://localhost:3845/assets/10fe225e6a03eb83952aa674f277b83c87d3c9d0.svg",
-      "likeIconUrl": "http://localhost:3845/assets/b543e04bcb4e4643f56d0ca5e0eeecbbde546985.svg"
+      "commentIconUrl": "/assets/10fe225e6a03eb83952aa674f277b83c87d3c9d0.svg",
+      "likeIconUrl": "/assets/b543e04bcb4e4643f56d0ca5e0eeecbbde546985.svg"
     },
     {
       "id": 102,
@@ -61,8 +61,8 @@
       "createdAt": "2026-03-21T15:00:00Z",
       "commentCount": 24,
       "likeCount": 89,
-      "commentIconUrl": "http://localhost:3845/assets/10fe225e6a03eb83952aa674f277b83c87d3c9d0.svg",
-      "likeIconUrl": "http://localhost:3845/assets/b543e04bcb4e4643f56d0ca5e0eeecbbde546985.svg"
+      "commentIconUrl": "/assets/10fe225e6a03eb83952aa674f277b83c87d3c9d0.svg",
+      "likeIconUrl": "/assets/b543e04bcb4e4643f56d0ca5e0eeecbbde546985.svg"
     },
     {
       "id": 103,
@@ -72,8 +72,8 @@
       "createdAt": "2026-03-14T09:00:00Z",
       "commentCount": 15,
       "likeCount": 62,
-      "commentIconUrl": "http://localhost:3845/assets/10fe225e6a03eb83952aa674f277b83c87d3c9d0.svg",
-      "likeIconUrl": "http://localhost:3845/assets/b543e04bcb4e4643f56d0ca5e0eeecbbde546985.svg"
+      "commentIconUrl": "/assets/10fe225e6a03eb83952aa674f277b83c87d3c9d0.svg",
+      "likeIconUrl": "/assets/b543e04bcb4e4643f56d0ca5e0eeecbbde546985.svg"
     }
   ]
 }

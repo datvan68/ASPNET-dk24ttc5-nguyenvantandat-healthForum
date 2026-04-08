@@ -11,7 +11,7 @@
       "title": "Dr.",
       "specialty": "Thận học",
       "isVerified": true,
-      "imageUrl": "http://localhost:3845/assets/b9875bff8b261f5490bfd213ff4884ebec4a2bac.png"
+      "imageUrl": "/assets/b9875bff8b261f5490bfd213ff4884ebec4a2bac.png"
     },
     "createdAt": "2026-03-27T14:14:00Z"
   },
@@ -27,7 +27,7 @@
       "title": "ThS.",
       "specialty": "Dược lâm sàng",
       "isVerified": true,
-      "imageUrl": "http://localhost:3845/assets/bdb6bb049d220d405b7ab81f738e9c296ffefa80.png"
+      "imageUrl": "/assets/bdb6bb049d220d405b7ab81f738e9c296ffefa80.png"
     },
     "createdAt": "2026-03-27T13:00:00Z"
   }

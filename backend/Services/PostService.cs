@@ -6,7 +6,7 @@ namespace backend.Services;
 
 public interface IPostService
 {
-    Task<PaginatedResponse<PostViewModel>> GetPostsAsync(int page, int pageSize, string sort);
+    Task<PaginatedResponse<PostViewModel>> GetPostsAsync(int page, int pageSize, string sort, string? category = null);
 }
 
 public sealed class PostService : IPostService
@@ -18,11 +18,11 @@ public sealed class PostService : IPostService
         _repository = repository;
     }
 
-    public async Task<PaginatedResponse<PostViewModel>> GetPostsAsync(int page, int pageSize, string sort)
+    public async Task<PaginatedResponse<PostViewModel>> GetPostsAsync(int page, int pageSize, string sort, string? category = null)
     {
         var (items, total) = sort == "popular" 
-            ? await _repository.GetPopularAsync(page, pageSize)
-            : await _repository.GetLatestAsync(page, pageSize);
+            ? await _repository.GetPopularAsync(page, pageSize, category)
+            : await _repository.GetLatestAsync(page, pageSize, category);
 
         var viewModels = items.Select(p => new PostViewModel(
             p.Id, p.Title, p.Content, p.VoteCount, p.CommentCount, p.IsVerified,

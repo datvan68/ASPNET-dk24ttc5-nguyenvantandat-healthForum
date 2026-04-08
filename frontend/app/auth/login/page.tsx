@@ -33,6 +33,7 @@ export default function LoginPage() {
         const data = await res.json();
         localStorage.setItem("user", JSON.stringify(data.user));
         localStorage.setItem("accessToken", data.accessToken);
+        window.dispatchEvent(new Event("auth-change"));
         toast.success("Chào mừng trở lại! Đăng nhập thành công.");
         router.push("/");
       } else {

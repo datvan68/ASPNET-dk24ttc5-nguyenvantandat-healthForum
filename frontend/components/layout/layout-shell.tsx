@@ -8,7 +8,7 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Toaster position="top-center" richColors />
-      <div className="min-h-screen pt-24">
+      <div className="min-h-screen pt-6">
         <Header />
         <main>{children}</main>
         <Footer />

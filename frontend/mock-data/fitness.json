@@ -1,0 +1,61 @@
+{
+  "featuredPost": {
+    "title": "Tối ưu hóa Hypertrophy: Khoa học đằng sau việc phát triển cơ bắp bền vững",
+    "snippet": "Khám phá các nghiên cứu mới nhất về áp lực cơ học, tổn thương cơ và căng thẳng trao đổi chất để tối đa hóa kết quả tập luyện của bạn chuyên sâu...",
+    "imageUrl": "https://img.freepik.com/free-photo/muscular-man-deadlift-training-gym_23-2148398188.jpg",
+    "author": {
+      "name": "Dr. Nam Nguyen",
+      "avatar": "https://randomuser.me/api/portraits/men/44.jpg"
+    },
+    "timestamp": "12 phút trước",
+    "likes": 142,
+    "comments": 89
+  },
+  "posts": [
+    {
+      "id": 1,
+      "title": "Chế độ ăn cho người tập Calisthenics: Bí quyết để giữ tỉ lệ mỡ thấp",
+      "snippet": "Làm thế nào để duy trì sức mạnh tuyệt đối trong khi vẫn giữ cân nặng ổn định cho các động tác khó như Planche hay Front Lever...",
+      "imageUrl": "https://img.freepik.com/free-photo/handsome-sporty-man-doing-pull-ups-outdoors_23-2148398205.jpg",
+      "author": "Minh Hiếu",
+      "category": "Dinh dưỡng",
+      "timestamp": "2 giờ trước",
+      "likes": "1.2k",
+      "comments": 45,
+      "variant": "standard"
+    },
+    {
+      "id": 2,
+      "title": "Lịch tập Push/Pull/Legs cho người bận rộn - Hiệu quả hay lãng phí thời gian?",
+      "snippet": "Em chỉ có 3 buổi/tuần, liệu áp dụng lịch tập này có đủ để kích thích phát triển cơ bắp không ạ? Cần lưu ý gì về cường độ...",
+      "author": "Thành Trung",
+      "category": "Hỏi đáp",
+      "timestamp": "5 giờ trước",
+      "likes": 850,
+      "comments": 21,
+      "variant": "highlight"
+    },
+    {
+      "id": 3,
+      "title": "Tầm quan trọng của giấc ngủ trong quá trình tổng hợp Protein",
+      "snippet": "Bạn có thể tập luyện cực khổ 2-3 tiếng mỗi ngày, nhưng nếu không ngủ đủ, cơ bắp sẽ không bao giờ đạt đỉnh và phục hồi...",
+      "imageUrl": "https://img.freepik.com/free-photo/young-man-sleeping-bedroom_23-2147844002.jpg",
+      "author": "Lan Anh (PT)",
+      "category": "Phục hồi",
+      "timestamp": "Hôm qua",
+      "likes": "3.4k",
+      "comments": 112,
+      "variant": "standard"
+    }
+  ],
+  "trending": [
+    { "id": 1, "title": "Sự thật về Creatine: Nên dùng khi nào?", "stats": "2.4k lượt quan tâm • 88 thảo luận" },
+    { "id": 2, "title": "Tập chân hay tập bụng quan trọng hơn?", "stats": "1.9k lượt quan tâm • 56 thảo luận" },
+    { "id": 3, "title": "Review top 5 bột Protein nội địa", "stats": "1.1k lượt quan tâm • 34 thảo luận" }
+  ],
+  "experts": [
+    { "name": "BS. Lê Mai", "role": "Chuyên gia Cơ Xương Khớp", "avatar": "https://randomuser.me/api/portraits/women/32.jpg", "status": "online" },
+    { "name": "Coach Hoàng", "role": "IFBB Pro Coach", "avatar": "https://randomuser.me/api/portraits/men/45.jpg", "status": "online" },
+    { "name": "Anh Tuấn (RD)", "role": "Chuyên gia Dinh dưỡng", "avatar": "https://randomuser.me/api/portraits/men/66.jpg", "status": "offline" }
+  ]
+}

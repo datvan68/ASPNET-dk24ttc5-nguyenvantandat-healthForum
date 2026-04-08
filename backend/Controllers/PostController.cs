@@ -16,9 +16,9 @@ public sealed class PostController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> Get([FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string sort = "newest")
+    public async Task<IActionResult> Get([FromQuery] int page = 1, [FromQuery] int pageSize = 20, [FromQuery] string sort = "newest", [FromQuery] string? category = null)
     {
-        var response = await _service.GetPostsAsync(page, pageSize, sort);
+        var response = await _service.GetPostsAsync(page, pageSize, sort, category);
         return Ok(response);
     }
 }

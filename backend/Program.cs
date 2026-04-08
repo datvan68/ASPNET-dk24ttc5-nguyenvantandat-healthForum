@@ -1,11 +1,13 @@
 using backend.Helpers;
 using backend.Middlewares;
+using backend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.UseUrls("http://localhost:8080", "https://localhost:8443");
 
 builder.Services.AddProjectServices();
+builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCors(options =>
@@ -21,10 +23,9 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-app.UseHttpsRedirection();
+app.UseCors("frontend");
 app.UseMiddleware<RequestLoggingMiddleware>();
 
-app.UseCors("frontend");
 app.MapControllers();
 
 app.Run();

@@ -5,25 +5,42 @@ import { Button } from "@/components/ui/button";
 import { Search, ChevronDown, User as UserIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export function Header() {
   const router = useRouter();
+  const pathname = usePathname();
   const [user, setUser] = useState<any>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  useEffect(() => {
+  const syncUser = () => {
     const storedUser = localStorage.getItem("user");
-    if (storedUser) {
-      setUser(JSON.parse(storedUser));
-    }
+    setUser(storedUser ? JSON.parse(storedUser) : null);
+  };
+
+  useEffect(() => {
+    // Read on mount
+    syncUser();
+
+    // Listen for auth changes from the SAME tab (custom event)
+    window.addEventListener("auth-change", syncUser);
+    // Listen for auth changes from OTHER tabs (native storage event)
+    window.addEventListener("storage", syncUser);
+
+    return () => {
+      window.removeEventListener("auth-change", syncUser);
+      window.removeEventListener("storage", syncUser);
+    };
   }, []);
 
   const handleLogout = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("accessToken");
     setUser(null);
-    router.refresh();
+    setIsDropdownOpen(false);
+    window.dispatchEvent(new Event("auth-change"));
+    router.push("/");
   };
 
   return (
@@ -39,15 +56,33 @@ export function Header() {
 
         {/* Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
-          {[ "Dinh dưỡng", "Thể hình", "Sức khỏe tâm thần", "Nghiên cứu" ].map((item, idx) => (
-            <Link 
-              key={item} 
-              href="#" 
-              className={`text-sm font-medium transition-colors hover:text-[#1e3a8a] ${idx === 0 ? "text-[#1e3a8a] border-b-2 border-[#1e3a8a] pb-1" : "text-slate-500"}`}
-            >
-              {item}
-            </Link>
-          ))}
+          {[
+            { label: "Dinh dưỡng", href: "/nutrition" },
+            { label: "Thể hình", href: "/fitness" },
+            { label: "Sức khỏe tâm thần", href: "/mental-health" },
+            { label: "Nghiên cứu", href: "/research" }
+          ].map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link 
+                key={item.label} 
+                href={item.href} 
+                className={cn(
+                  "relative text-sm font-semibold transition-colors py-1 px-1",
+                  isActive ? "text-[#003f87]" : "text-slate-500 hover:text-[#003f87]/70"
+                )}
+              >
+                {item.label}
+                {isActive && (
+                  <motion.div
+                    layoutId="active-nav-underline"
+                    className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#003f87] rounded-full"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Global Search & Actions */}

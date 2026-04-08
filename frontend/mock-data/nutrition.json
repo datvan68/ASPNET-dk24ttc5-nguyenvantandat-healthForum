@@ -1,0 +1,75 @@
+{
+  "category": "Dinh dưỡng",
+  "description": "Dinh dưỡng lâm sàng dựa trên bằng chứng, nghiên cứu chế độ ăn uống và các đối thoại về sức khỏe trao đổi chất được quản lý bởi các chuyên gia y tế.",
+  "hero": {
+    "title": "Thảo luận về Dinh dưỡng",
+    "breadcrumbs": ["HOME", "NUTRITION"]
+  },
+  "sidebar": {
+    "popularTags": [
+      { "label": "Metabolism", "color": "bg-[#80f98b]/30 text-[#007327]" },
+      { "label": "Gut Health", "color": "bg-slate-100 text-slate-600" },
+      { "label": "Omega-3", "color": "bg-slate-100 text-slate-600" },
+      { "label": "Keto Research", "color": "bg-slate-100 text-slate-600" },
+      { "label": "Fasting", "color": "bg-slate-100 text-slate-600" },
+      { "label": "Vitamin D", "color": "bg-slate-100 text-slate-600" }
+    ],
+    "relatedFields": [
+      "Nội tiết học",
+      "Y học thể thao",
+      "Nghiên cứu tự miễn"
+    ],
+    "featured": {
+      "title": "Tác động của hệ vi sinh vật đến chức năng nhận thức",
+      "tag": "NGHIÊN CỨU MỚI NHẤT",
+      "imageUrl": "https://img.freepik.com/free-photo/scientist-microscope-working-lab_23-2148851025.jpg"
+    }
+  },
+  "posts": [
+    {
+      "id": 101,
+      "title": "Phân tích về việc Nhịn ăn gián đoạn đối với việc Thuyên giảm bệnh Tiểu đường loại 2",
+      "snippet": "Các nghiên cứu dọc gần đây cho thấy sự linh hoạt trong trao đổi chất có thể được khôi phục thông qua các quy tắc 16:8 cụ thể khi kết hợp với lượng protein cao...",
+      "author": {
+        "fullName": "Dr. Julian Aris",
+        "title": "Verified MD",
+        "avatarUrl": "https://randomuser.me/api/portraits/men/32.jpg"
+      },
+      "tags": ["Clinical Trials", "Metabolism"],
+      "createdAt": "2h ago",
+      "commentCount": 48,
+      "viewCount": 1200,
+      "isVerified": true
+    },
+    {
+      "id": 102,
+      "title": "Khả dụng sinh học của Sắt thực vật so với Sắt Heme",
+      "snippet": "Tìm kiếm các bài báo gần đây về hiệu quả của việc bổ sung vitamin C cùng với sắt không chứa heme cho vận động viên...",
+      "author": {
+        "fullName": "Sarah Thompson",
+        "title": "Nutritionist",
+        "avatarUrl": "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      "tags": ["Hematology"],
+      "createdAt": "5h ago",
+      "commentCount": 12,
+      "viewCount": 450,
+      "isVerified": false
+    },
+    {
+      "id": 103,
+      "title": "Axit béo Omega-3 và Viêm dây thần kinh: Một phân tích gộp",
+      "snippet": "Phát hiện mới từ nhóm trường Y Harvard cho thấy tỷ lệ EPA có thể quan trọng hơn DHA trong việc kiềm chế viêm hệ thống...",
+      "author": {
+        "fullName": "Elena Rossi",
+        "title": "Research Associate",
+        "avatarUrl": "https://randomuser.me/api/portraits/women/68.jpg"
+      },
+      "tags": ["Neurology", "Lipids"],
+      "createdAt": "8h ago",
+      "commentCount": 89,
+      "viewCount": 2800,
+      "isVerified": true
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "category": "Mental Health",
+  "hero": {
+    "title": "Trí tuệ tập thể cho Sức khỏe Chính xác.",
+    "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
+    "breadcrumbs": ["HOME", "MENTAL HEALTH"],
+    "imageUrl": "https://img.freepik.com/free-photo/view-futuristic-modern-building_23-2150931215.jpg"
+  },
+  "topics": [
+    {
+      "id": "nutrition",
+      "title": "Dinh dưỡng",
+      "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
+      "discussionCount": "12.4k",
+      "fileCount": "2.1k",
+      "imageUrl": "https://img.freepik.com/free-photo/fresh-salad-with-vegetables-seeds-bowl_23-2148853384.jpg",
+      "icon": "Apple",
+      "variant": "light-illustrated",
+      "span": "col-span-12 lg:col-span-6",
+      "avatars": [
+        "https://randomuser.me/api/portraits/men/10.jpg",
+        "https://randomuser.me/api/portraits/women/11.jpg",
+        "https://randomuser.me/api/portraits/men/12.jpg"
+      ]
+    },
+    {
+      "id": "fitness",
+      "title": "Thể hình & Cơ sinh học",
+      "description": "Nghiên cứu về sự phì đại hiệu suất cao và nghiên cứu độ bền tim mạch.",
+      "discussionCount": "12.4k",
+      "fileCount": "2.1k",
+      "imageUrl": "https://img.freepik.com/free-photo/strong-man-training-gym_23-2148398184.jpg",
+      "icon": "Dumbbell",
+      "variant": "dark-prominent",
+      "span": "col-span-12 lg:col-span-6"
+    },
+    {
+      "id": "mental-health",
+      "title": "Mental Health",
+      "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
+      "discussionCount": "8.2k",
+      "fileCount": "1.5k",
+      "imageUrl": "https://img.freepik.com/free-icon/brain_318-157640.jpg",
+      "icon": "Brain",
+      "variant": "minimal",
+      "span": "col-span-12 lg:col-span-4"
+    },
+    {
+      "id": "longevity",
+      "title": "Sự trường thọ & Lão khoa",
+      "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
+      "discussionCount": "5.6k",
+      "fileCount": "0.9k",
+      "imageUrl": "https://img.freepik.com/free-photo/scientist-working-modern-laboratory_23-2148853399.jpg",
+      "icon": "Zap",
+      "badge": "LATEST RESEARCH",
+      "variant": "horizontal-wide",
+      "span": "col-span-12 lg:col-span-8"
+    }
+  ],
+  "recentDiscussions": [
+    {
+      "id": 201,
+      "title": "Quan sát về việc nhịn ăn gián đoạn và tự miễn dịch tuyến giáp ở các nhóm nữ giới",
+      "snippet": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ.",
+      "author": {
+        "fullName": "Dr. Elena Vance",
+        "title": "Endocrinologist",
+        "avatarUrl": "https://randomuser.me/api/portraits/women/12.jpg"
+      },
+      "tags": ["Verified Expert"],
+      "createdAt": "12m ago",
+      "commentCount": 84,
+      "viewCount": 2400,
+      "isVerified": true
+    },
+    {
+      "id": 202,
+      "title": "New meta-analysis on Zone 2 training and mitochondrial density",
+      "snippet": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ.",
+      "author": {
+        "fullName": "Markus S.",
+        "title": "Research Fellow",
+        "avatarUrl": "https://randomuser.me/api/portraits/men/45.jpg"
+      },
+      "tags": [],
+      "createdAt": "2h ago",
+      "commentCount": 15,
+      "viewCount": 890,
+      "isVerified": false
+    }
+  ],
+  "sidebar": {
+    "trending": [
+      {
+        "category": "PHARMACOLOGY",
+        "title": "Efficacy of GLP-1 agonists in non-diabetic weight management",
+        "membersCount": "1.2k"
+      },
+      {
+        "category": "SLEEP SCIENCE",
+        "title": "Impact of magnesium threonate on REM latency phases",
+        "membersCount": "840"
+      },
+      {
+        "category": "LONGEVITY",
+        "title": "Rapamycin: Current consensus on human dosage intervals",
+        "membersCount": "3.5k"
+      }
+    ],
+    "cta": {
+      "title": "Gia nhập Hội đồng đánh giá",
+      "description": "Are you a MD or PhD? Help us maintain the highest standards of medical accuracy.",
+      "buttonLabel": "Ứng tuyển ngay"
+    }
+  }
+}

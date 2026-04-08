@@ -1,0 +1,11 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+D:\PROJECT\health-forum-website\backend\Services\ProfileService.cs(39,40): error CS1061: 'Expert' does not contain a definition for 'CoverImageUrl' and no accessible extension method 'CoverImageUrl' accepting a first argument of type 'Expert' could be found (are you missing a using directive or an assembly reference?) [D:\PROJECT\health-forum-website\backend\backend.csproj]
+
+Build FAILED.
+
+D:\PROJECT\health-forum-website\backend\Services\ProfileService.cs(39,40): error CS1061: 'Expert' does not contain a definition for 'CoverImageUrl' and no accessible extension method 'CoverImageUrl' accepting a first argument of type 'Expert' could be found (are you missing a using directive or an assembly reference?) [D:\PROJECT\health-forum-website\backend\backend.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:01.13
