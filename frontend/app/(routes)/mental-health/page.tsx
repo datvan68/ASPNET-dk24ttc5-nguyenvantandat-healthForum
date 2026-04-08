@@ -5,6 +5,7 @@ import { MentalHealthHero } from "@/components/mental-health/MentalHealthHero";
 import { MentalHealthSidebar } from "@/components/mental-health/MentalHealthSidebar";
 import { TopicCard } from "@/components/mental-health/TopicCard";
 import { ArticleCard } from "@/components/shared/category/ArticleCard";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import mentalHealthData from "@/mock-data/mental-health.json";
 import { MoveRight } from "lucide-react";
 import Link from "next/link";
@@ -15,11 +16,13 @@ export default function MentalHealthPage() {
       <Header />
       
       <main className="container mx-auto px-6 lg:px-32 pt-24">
+        {/* Breadcrumbs */}
+        <Breadcrumbs items={[{ label: "Sức khỏe tâm thần" }]} className="mb-0" />
+
         {/* Hub Hero */}
         <MentalHealthHero 
           title={mentalHealthData.hero.title}
           description={mentalHealthData.hero.description}
-          breadcrumbs={mentalHealthData.hero.breadcrumbs}
           imageUrl={mentalHealthData.hero.imageUrl}
         />
 

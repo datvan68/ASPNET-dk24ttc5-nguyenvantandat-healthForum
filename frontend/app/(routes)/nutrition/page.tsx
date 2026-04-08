@@ -7,6 +7,7 @@ import { NutritionSidebar } from "@/components/nutrition/NutritionSidebar";
 import { CategorySorting } from "@/components/shared/category/CategorySorting";
 import { ArticleCard } from "@/components/shared/category/ArticleCard";
 import { Pagination } from "@/components/shared/Pagination";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import nutritionData from "@/mock-data/nutrition.json";
 
 const nutritionTabs = [
@@ -31,6 +32,9 @@ export default function NutritionPage() {
       <Header />
       
       <main className="container mx-auto px-6 lg:px-32 pt-24">
+        {/* Breadcrumbs */}
+        <Breadcrumbs items={[{ label: "Dinh dưỡng" }]} className="mb-0" />
+
         {/* Hero Section */}
         <CategoryHero 
           title={nutritionData.hero.title}

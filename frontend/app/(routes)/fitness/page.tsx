@@ -9,11 +9,11 @@ export default function FitnessPage() {
   const { featuredPost, posts, trending, experts } = fitnessData;
 
   return (
-    <main className="min-h-screen bg-[#f7f9fb] pt-32 pb-20">
-      <div className="container mx-auto px-6 lg:px-32 flex flex-col gap-12">
+    <main className="min-h-screen bg-[#f7f9fb] pt-24 pb-20">
+      <div className="container mx-auto px-6 lg:px-32 flex flex-col gap-8">
         
         {/* Breadcrumbs */}
-        <Breadcrumbs items={[{ label: "Thể hình" }]} className="mb-0 -mt-2" />
+        <Breadcrumbs items={[{ label: "Thể hình"}]} className="mb-0" />
 
         {/* Header Section */}
         <section>

@@ -54,3 +54,10 @@ Hệ thống sử dụng các MCP Servers cục bộ (Figma, GitHub, NotebookLM,
 ## 5. Những Tính Năng Đã Hoàn Thành (Completed Milestones)
 - **Trang Đăng ký (Registration Screen)**: Hoàn thành thiết kế, backend và UI.
 - **Trang Chủ (Home Page)**: Hoàn thành giao diện hoàn chỉnh (Hero, Stats, Roadmap, QA, Clusters, Feed, Library, Events, Partners) tích hợp Header/Footer toàn cục và mock data API.
+- **Trang Dinh dưỡng (Nutrition Page)**: Layout theo dạng bento grid, danh sách hệ sinh thái tác giả, hiển thị trạng thái đã xác minh.
+- **Trang Sức khỏe tâm thần (Mental Health Page)**: Tính năng lưới Bento được tinh chỉnh theo typography, chia grid span linh hoạt tạo giao diện hiện đại.
+- **Trang Nghiên cứu (Research Page - Article Thread)**: Giao diện bài viết chi tiết tích hợp Sticky Author Sidebar, nội dung nghiên cứu sâu (Blockquotes tiêu chuẩn lâm sàng) và hệ thống Thảo luận phân nhánh tuyến tính (hỗ trợ tag Tác giả, Chuyên gia).
+- **Trang Thể hình (Fitness Page - Community Forum)**: Xây dựng chuyên trang cộng đồng với Tag Filters linh hoạt, thẻ hiển thị Bài báo/Hỏi đáp Nổi bật, và Sidebar tương tác cao (Tin Trending, Chuyên gia đang Online, Đăng ký Newsletter).
+- **Global UI Enhancements**:
+  - Tích hợp tính năng Breadcrumbs điều hướng toàn cục đa cấp có độ tùy biến chuyên sâu.
+  - Animations `framer-motion` cho Header Navigation với LayoutId trượt mượt mà tương tác Active Route sinh động qua `usePathname`.

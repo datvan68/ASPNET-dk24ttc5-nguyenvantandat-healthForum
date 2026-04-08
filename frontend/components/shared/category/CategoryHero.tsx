@@ -15,22 +15,12 @@ interface CategoryHeroProps {
 export function CategoryHero({ 
   title, 
   description, 
-  breadcrumbs, 
   actionLabel = "Bài viết mới",
   onActionClick,
   titleClassName = "text-[56px]"
 }: CategoryHeroProps) {
   return (
-    <section className="pt-12 pb-10">
-      <div className="flex items-center gap-[40px] text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-[24px]">
-        {breadcrumbs.map((crumb, idx) => (
-          <span key={crumb} className="flex items-center gap-2">
-            <span className={idx === breadcrumbs.length - 1 ? "text-[#1e3a8a]" : ""}>{crumb}</span>
-            {idx < breadcrumbs.length - 1 && <span>/</span>}
-          </span>
-        ))}
-      </div>
-
+    <section className="pt-6 pb-10">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
         <div className="max-w-2xl">
           <motion.h1 

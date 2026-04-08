@@ -7,22 +7,12 @@ import { Button } from "@/components/ui/button";
 interface MentalHealthHeroProps {
   title: string;
   description: string;
-  breadcrumbs: string[];
   imageUrl: string;
 }
 
-export function MentalHealthHero({ title, description, breadcrumbs, imageUrl }: MentalHealthHeroProps) {
+export function MentalHealthHero({ title, description, imageUrl }: MentalHealthHeroProps) {
   return (
-    <section className="pt-16 pb-20">
-      <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-8">
-        {breadcrumbs.map((crumb, idx) => (
-          <span key={crumb} className="flex items-center gap-2">
-            <span className={idx === breadcrumbs.length - 1 ? "text-[#1e3a8a]" : ""}>{crumb}</span>
-            {idx < breadcrumbs.length - 1 && <span>/</span>}
-          </span>
-        ))}
-      </div>
-
+    <section className="pt-6 pb-20">
       <div className="flex flex-col lg:flex-row gap-16 items-center">
         <div className="lg:w-1/2">
           <motion.h1 
@@ -32,7 +22,7 @@ export function MentalHealthHero({ title, description, breadcrumbs, imageUrl }: 
           >
             {title}
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}

@@ -8,14 +8,13 @@ export default function ResearchPage() {
   const { article, comments } = researchData;
 
   return (
-    <main className="min-h-screen bg-[#f7f9fb] pt-32 pb-20">
+    <main className="min-h-screen bg-[#f7f9fb] pt-24 pb-20">
       <div className="container mx-auto px-6 lg:px-32 flex flex-col gap-8">
         
         {/* Breadcrumbs */}
         <Breadcrumbs 
           items={[
-            { label: "Nghiên cứu", href: "/research" },
-            { label: "Sự linh hoạt trong trao đổi chất" }
+            { label: "Nghiên cứu"},
           ]} 
           className="mb-0" 
         />

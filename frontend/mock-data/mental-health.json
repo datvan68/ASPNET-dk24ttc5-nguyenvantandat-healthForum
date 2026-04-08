@@ -3,7 +3,6 @@
   "hero": {
     "title": "Trí tuệ tập thể cho Sức khỏe Chính xác.",
     "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
-    "breadcrumbs": ["HOME", "MENTAL HEALTH"],
     "imageUrl": "https://img.freepik.com/free-photo/view-futuristic-modern-building_23-2150931215.jpg"
   },
   "topics": [
@@ -68,7 +67,9 @@
         "title": "Endocrinologist",
         "avatarUrl": "https://randomuser.me/api/portraits/women/12.jpg"
       },
-      "tags": ["Verified Expert"],
+      "tags": [
+        "Verified Expert"
+      ],
       "createdAt": "12m ago",
       "commentCount": 84,
       "viewCount": 2400,
