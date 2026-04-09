@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -35,7 +35,8 @@ export default function RegisterPage() {
 
     setLoading(true);
     try {
-      const res = await fetch("https://localhost:8443/api/auth/register", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+      const res = await fetch(`${apiUrl}/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -55,18 +56,18 @@ export default function RegisterPage() {
     }
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
   };
 
   return (
-    <div className="min-h-screen w-full flex bg-[#f7f9fb] font-inter">
+    <div className="min-h-screen w-full flex bg-[#f7f9fb] font-inter pt-12">
       {/* Visual Branding Panel (60% Desktop) */}
       <motion.div 
         initial={{ x: -100, opacity: 0 }}

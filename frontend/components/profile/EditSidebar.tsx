@@ -23,7 +23,7 @@ interface EditSidebarProps {
 
 export default function EditSidebar({ activeSection, onSectionChange, user }: EditSidebarProps) {
   return (
-    <aside className="w-64 border-r border-slate-200/50 bg-white/50 backdrop-blur-sm h-full flex flex-col pt-6">
+    <aside className="w-64 border-r border-slate-200/50 bg-white/50 backdrop-blur-sm h-[calc(100vh-6rem)] flex flex-col pt-6 sticky top-24 overflow-y-auto">
       {/* User Mini Profile */}
       <div className="px-6 pb-8 border-b border-slate-100 mb-4">
         <div className="flex items-center gap-3">

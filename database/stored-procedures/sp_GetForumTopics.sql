@@ -1,11 +1,9 @@
 USE HealthForumDb;
-GO
 
-CREATE OR ALTER PROCEDURE sp_GetForumTopics
-AS
+DELIMITER //
+
+CREATE PROCEDURE sp_GetForumTopics()
 BEGIN
-    SET NOCOUNT ON;
-
     SELECT
         t.Id,
         t.Title,
@@ -15,5 +13,6 @@ BEGIN
     FROM Topics t
     INNER JOIN ForumCategories c ON c.Id = t.CategoryId
     ORDER BY t.CreatedAt DESC;
-END;
-GO
+END //
+
+DELIMITER ;

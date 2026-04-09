@@ -13,7 +13,7 @@ const posts = [
     votes: 142,
     comments: 28,
     isVerified: true,
-    avatar: "http://localhost:3845/assets/b9875bff8b261f5490bfd213ff4884ebec4a2bac.png"
+    avatar: "/assets/avatar-minh-pham.png"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const posts = [
     votes: 89,
     comments: 15,
     isVerified: false,
-    avatar: "http://localhost:3845/assets/bdb6bb049d220d405b7ab81f738e9c296ffefa80.png"
+    avatar: "/assets/avatar-linh-nguyen.png"
   }
 ];
 
@@ -73,21 +73,22 @@ export function MainFeedGrid() {
                   </h3>
                   <div className="flex gap-6 items-center text-slate-400">
                     <button className="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
-                      <ThumbsUp className="w-4 h-4" /> <span className="text-sm font-medium">{post.votes}</span>
+                      <img src="/assets/icon-thumbs-up.svg" alt="Upvote" className="w-4 h-4" /> <span className="text-sm font-medium">{post.votes}</span>
                     </button>
                     <button className="flex items-center gap-1.5 hover:text-blue-600 transition-colors">
-                      <MessageSquare className="w-4 h-4" /> <span className="text-sm font-medium">{post.comments}</span>
+                      <img src="/assets/icon-comments.svg" alt="Comments" className="w-4 h-4" /> <span className="text-sm font-medium">{post.comments}</span>
                     </button>
                     <button className="flex items-center gap-1.5 ml-auto hover:text-yellow-600 transition-colors">
-                      <Bookmark className="w-4 h-4" /> <span className="text-sm font-medium">Lưu</span>
+                      <img src="/assets/icon-bookmark.svg" alt="Save" className="w-4 h-4" /> <span className="text-sm font-medium">Lưu</span>
                     </button>
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
-          <Button variant="outline" className="w-full py-6 rounded-xl border-slate-300 text-[#003f87]">
+          <Button variant="outline" className="w-full py-6 rounded-xl border-slate-300 text-[#003f87] gap-2">
             Tải thêm thảo luận
+            <img src="/assets/icon-chevron-down.svg" alt="Chevron" className="w-3 h-2" />
           </Button>
         </div>
       </div>
@@ -97,7 +98,7 @@ export function MainFeedGrid() {
         {/* Trending Widget */}
         <div className="bg-[#f2f4f6] rounded-2xl p-8 space-y-6">
           <div className="flex items-center gap-2 text-slate-900">
-            <TrendingUp className="w-5 h-5 text-blue-600" />
+            <img src="/assets/icon-trending.svg" alt="Trending" className="w-5 h-3" />
             <h3 className="text-lg font-bold font-[Roboto]">Đang là xu hướng</h3>
           </div>
           <div className="space-y-6">
@@ -133,11 +134,12 @@ export function MainFeedGrid() {
         <div className="p-4 space-y-4">
           <h4 className="text-[12px] uppercase font-bold text-slate-400 tracking-[1.2px]">Chuyên gia trực tuyến</h4>
           <div className="flex items-center -space-x-2">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="w-10 h-10 rounded-xl border-2 border-green-500 overflow-hidden bg-white">
-                <img src={`http://localhost:3845/assets/eb2aa8d261845913ec2cd9c6006dab30e6b6a920.png`} alt="Expert" className="w-full h-full object-cover" />
-              </div>
-            ))}
+            <div className="w-10 h-10 rounded-xl border-2 border-green-500 overflow-hidden bg-white">
+              <img src="/assets/avatar-expert-1.png" alt="Expert" className="w-full h-full object-cover" />
+            </div>
+            <div className="w-10 h-10 rounded-xl border-2 border-green-500 overflow-hidden bg-white">
+              <img src="/assets/avatar-expert-2.png" alt="Expert" className="w-full h-full object-cover" />
+            </div>
             <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-[12px] font-bold text-slate-500">
               +24
             </div>

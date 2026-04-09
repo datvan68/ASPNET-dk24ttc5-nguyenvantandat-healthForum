@@ -4,24 +4,29 @@ using backend.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.UseUrls("http://localhost:8080", "https://localhost:8443");
-
 builder.Services.AddProjectServices();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("frontend", policy =>
     {
         policy
-            .WithOrigins("http://localhost:3000")
+            .SetIsOriginAllowed(origin => true)
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
 });
 
 var app = builder.Build();
+
+app.UseSwagger();
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Health Forum API V1");
+});
 
 app.UseCors("frontend");
 app.UseMiddleware<RequestLoggingMiddleware>();

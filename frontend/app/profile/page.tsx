@@ -5,6 +5,7 @@ import { ProfileTabs } from "@/components/profile/ProfileTabs";
 import { ProfileSkeleton } from "@/components/profile/ProfileSkeleton";
 import profileData from "@/mock-data/profile.json";
 import { Suspense } from "react";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
 export default function ProfilePage() {
   const { profile, posts } = profileData;
@@ -16,13 +17,17 @@ export default function ProfilePage() {
   }));
 
   return (
-    <main className="min-h-screen bg-[#f7f9fb] flex flex-col items-center">
+    <main className="min-h-screen bg-[#f7f9fb] flex flex-col items-center pt-24">
       {/* Header */}
       <Header />
 
+      <div className="w-full max-w-[1440px] px-8 mt-6">
+        <Breadcrumbs items={[{ label: "Hồ sơ cá nhân" }]} className="mb-4" />
+      </div>
+
       {/* Hero Section with Skeleton Fallback */}
-      <Suspense fallback={<ProfileSkeleton />}>
-        <div className="w-full max-w-[1440px]">
+      <Suspense fallback={<div className="w-full max-w-[1440px] px-8"><ProfileSkeleton /></div>}>
+        <div className="w-full max-w-[1440px] px-8">
           <ProfileHero 
             {...profile}
             joinDate="tháng 3, 2023" // Specific from Figma

@@ -8,7 +8,7 @@ const clusters = [
     title: "Dinh dưỡng lâm sàng",
     label: "Dinh dưỡng",
     description: "Phân tích chuyên sâu về chế độ ăn...",
-    image: "http://localhost:3845/assets/6aca29e9ec0b4f28fd0116cc755514edbf1cca82.png",
+    image: "/assets/cluster-nutrition.png",
     labelBg: "bg-[#80f98b]",
     labelText: "text-[#007327]"
   },
@@ -17,7 +17,7 @@ const clusters = [
     title: "Thể hình & Cơ sinh học",
     label: "Thể hình",
     description: "Tối ưu hóa hiệu suất qua dữ liệu.",
-    image: "http://localhost:3845/assets/01400b4cf201a402d5b0c4cce474b3ed4f443710.png",
+    image: "/assets/cluster-fitness.png",
     labelBg: "bg-[#d7e2ff]",
     labelText: "text-[#001a40]"
   },
@@ -26,7 +26,7 @@ const clusters = [
     title: "Sức khỏe tâm thần",
     label: "Tâm lý",
     description: "Giải pháp bền vững cho não bộ.",
-    image: "http://localhost:3845/assets/66923085341b5b074eb4bb3ef25c7e06ffd15edb.png",
+    image: "/assets/cluster-mental.png",
     labelBg: "bg-[#ffdbcc]",
     labelText: "text-[#351000]"
   },
@@ -35,7 +35,7 @@ const clusters = [
     title: "Nghiên cứu tuổi thọ",
     label: "Tuổi thọ",
     description: "Khám phá phương thức kéo dài...",
-    image: "http://localhost:3845/assets/49b8ec2c07739951208814f20853d1afd79f01c3.png",
+    image: "/assets/cluster-longevity.png",
     labelBg: "bg-[#83fc8e]",
     labelText: "text-[#002106]"
   }

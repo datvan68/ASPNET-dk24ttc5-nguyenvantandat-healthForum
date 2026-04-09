@@ -11,7 +11,7 @@ const qaSpotlights = [
     answer: "Đối với người có chức năng thận bình thường, Creatine Monohydrate là một trong những thực phẩm bổ sung được nghiên cứu kỹ lưỡng nhất và an toàn...",
     doctor: "Dr. Minh Pham",
     specialty: "Thận học",
-    avatar: "http://localhost:3845/assets/b9875bff8b261f5490bfd213ff4884ebec4a2bac.png"
+    avatar: "/assets/avatar-minh-pham.png"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const qaSpotlights = [
     answer: "Vitamin D3 và K2 đều là các vitamin tan trong chất béo, vì vậy thời điểm tốt nhất là uống trong hoặc ngay sau bữa ăn có chứa chất béo...",
     doctor: "ThS. Linh Nguyen",
     specialty: "Dược lâm sàng",
-    avatar: "http://localhost:3845/assets/bdb6bb049d220d405b7ab81f738e9c296ffefa80.png"
+    avatar: "/assets/avatar-linh-nguyen.png"
   }
 ];
 
@@ -50,8 +50,8 @@ export function ExpertQASection() {
             className="bg-white rounded-3xl p-10 shadow-sm border border-[#f1f5f9] hover:shadow-md transition-shadow"
           >
             <div className="flex gap-6 mb-8">
-              <div className="p-3 bg-blue-50 rounded-2xl shrink-0">
-                <MessageSquare className="w-6 h-6 text-blue-600" />
+              <div className="w-12 h-12 bg-blue-50 rounded-2xl shrink-0 flex items-center justify-center p-2">
+                <img src="/assets/qa-quote-icon.svg" alt="Q&A Icon" className="w-full h-full" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 font-manrope">
                 {item.question}

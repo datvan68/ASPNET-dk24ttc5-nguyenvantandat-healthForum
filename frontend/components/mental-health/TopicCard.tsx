@@ -37,7 +37,8 @@ export function TopicCard({
   span = "col-span-1",
   idx = 0
 }: TopicCardProps) {
-  const Icon = icon ? icons[icon] : null;
+  const Icon = icon && !icon.includes(".svg") ? icons[icon] : null;
+  const iconPath = icon && icon.includes(".svg") ? icon : null;
 
   return (
     <motion.div
@@ -82,6 +83,7 @@ export function TopicCard({
                     variant === "dark-prominent" ? "bg-white/10" : "bg-transparent text-[#003f87]"
                  )}>
                     {Icon && <Icon size={28} className={variant === "dark-prominent" ? "text-[#80f98b]" : ""} strokeWidth={2.5} />}
+                    {iconPath && <img src={iconPath} alt="" className="w-8 h-8 object-contain" />}
                  </div>
               )}
            </div>

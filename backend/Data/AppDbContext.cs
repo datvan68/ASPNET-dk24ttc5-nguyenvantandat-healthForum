@@ -9,6 +9,7 @@ public sealed class AppDbContext : DbContext
     {
     }
 
+    public DbSet<User> Users => Set<User>();
     public DbSet<Expert> Experts => Set<Expert>();
     public DbSet<Category> Categories => Set<Category>();
     public DbSet<Post> Posts => Set<Post>();
@@ -22,6 +23,10 @@ public sealed class AppDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         
+        // Unique constraints for User
+        modelBuilder.Entity<User>().HasIndex(u => u.Email).IsUnique();
+        modelBuilder.Entity<User>().HasIndex(u => u.Username).IsUnique();
+
         // Indexing based on screen_spec requirements
         modelBuilder.Entity<Post>().HasIndex(p => p.VoteCount);
         modelBuilder.Entity<Post>().HasIndex(p => p.CreatedAt);

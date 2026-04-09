@@ -9,8 +9,8 @@ export function HomeHero() {
       {/* Background Image/Overlay */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
         <img 
-          src="http://localhost:3845/assets/8e0b6b951ecac7d24d6d28210ff74a714ba2cce1.png" 
-          alt="Abstract Glow"
+          src="/assets/hero-bg-home.png" 
+          alt="Medical Research Lab"
           className="w-full h-full object-cover scale-150 transform -translate-y-1/4"
         />
       </div>

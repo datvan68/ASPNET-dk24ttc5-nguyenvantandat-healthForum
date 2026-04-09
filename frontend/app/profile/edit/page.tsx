@@ -8,6 +8,7 @@ import ProfileBannerEdit from "@/components/profile/ProfileBannerEdit";
 import EditForms from "@/components/profile/EditForms";
 import { getProfile } from "@/services/profile";
 import { toast } from "sonner";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
 export default function EditProfilePage() {
   const router = useRouter();
@@ -77,6 +78,13 @@ export default function EditProfilePage() {
         {/* Content Area */}
         <div className="flex-1 overflow-y-auto px-8 pt-6">
           <div className="max-w-6xl mx-auto">
+            <Breadcrumbs 
+              items={[
+                { label: "Hồ sơ cá nhân", href: "/profile" },
+                { label: "Chỉnh sửa hồ sơ" }
+              ]} 
+              className="mb-6"
+            />
             {activeSection === "personal" ? (
               <>
                 <ProfileBannerEdit user={user} />

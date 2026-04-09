@@ -21,9 +21,10 @@ export default function MentalHealthPage() {
 
         {/* Hub Hero */}
         <MentalHealthHero 
-          title={mentalHealthData.hero.title}
-          description={mentalHealthData.hero.description}
-          imageUrl={mentalHealthData.hero.imageUrl}
+          titleMain="Trí tuệ tập thể cho"
+          titleHighlight="Sức khỏe Chính xác."
+          description="Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng."
+          imageUrl="/assets/mental-health-hero.png"
         />
 
         {/* Topic Grid Section */}
@@ -54,10 +55,10 @@ export default function MentalHealthPage() {
               {/* Main Feed (8/12) */}
               <div className="lg:col-span-8">
                  <div className="flex items-center justify-between mb-12">
-                   <h2 className="text-3xl font-extrabold text-[#191c1e]">Thảo luận gần đây</h2>
-                   <div className="flex bg-[#f2f4f6] p-1 rounded-lg">
-                      <button className="px-6 py-2 bg-white text-[#1e3a8a] rounded-md text-xs font-bold shadow-sm">Latest</button>
-                      <button className="px-6 py-2 text-slate-400 text-xs font-bold hover:text-slate-600 transition-colors">Unanswered</button>
+                   <h2 className="text-[30px] font-bold text-[#003f87] font-manrope">Thảo luận gần đây</h2>
+                   <div className="flex gap-2">
+                      <button className="px-4 py-2 bg-[#003f87] text-white rounded-[4px] text-sm font-semibold shadow-sm">Latest</button>
+                      <button className="px-4 py-2 text-[#191c1e] text-sm font-medium hover:bg-slate-100 rounded-[4px] transition-colors">Unanswered</button>
                    </div>
                  </div>
 

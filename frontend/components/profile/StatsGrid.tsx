@@ -42,23 +42,23 @@ export function StatsGrid({ healthScore, badges }: StatsGridProps) {
       initial="hidden"
       whileInView="show"
       viewport={{ once: true }}
-      className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full max-w-[1228px] mx-auto px-8 mb-12"
+      className="flex gap-[24px] items-start w-full max-w-[1228px] mx-auto px-8 mb-12"
     >
       {/* Health Score Card */}
       <motion.div 
         variants={item}
-        className="bg-[#f2f4f6] p-6 rounded-xl flex flex-col justify-between h-44 shadow-sm"
+        className="bg-[#f2f4f6] p-[24px] rounded-[8px] flex flex-col justify-between h-[180px] w-[275px] shrink-0"
       >
-        <div>
-          <span className="text-[10px] font-bold uppercase tracking-widest text-[#727784] mb-1 block">
+        <div className="flex flex-col gap-[4px] items-start">
+          <span className="text-[10px] font-semibold uppercase tracking-[1px] text-[#727784] mb-1 block">
             Tổng điểm sức khỏe
           </span>
-          <h3 className="text-4xl font-extrabold text-[#003f87] font-['Manrope',sans-serif]">
+          <h3 className="text-[36px] font-['Manrope',sans-serif] font-extrabold text-[#003f87] leading-[40px]">
             {isMounted ? healthScore.toLocaleString('en-US') : healthScore}
           </h3>
         </div>
-        <div className="bg-[#003f87]/5 p-3 rounded-lg">
-          <p className="text-xs text-[#424752] leading-tight">
+        <div className="bg-[rgba(0,63,135,0.05)] p-[12px] rounded-[4px]">
+          <p className="text-[12px] text-[#424752] leading-[19.5px]">
             Top 5% người đóng góp trong tháng này
           </p>
         </div>
@@ -67,28 +67,35 @@ export function StatsGrid({ healthScore, badges }: StatsGridProps) {
       {/* Badges Card */}
       <motion.div 
         variants={item}
-        className="col-span-1 md:col-span-3 bg-[#f2f4f6] p-6 rounded-xl shadow-sm"
+        className="flex-1 bg-[#f2f4f6] pb-[36px] pt-[24px] px-[24px] rounded-[8px]"
       >
-        <span className="text-[10px] font-bold uppercase tracking-widest text-[#727784] mb-6 block">
+        <span className="text-[10px] font-semibold uppercase tracking-[1px] text-[#727784] mb-6 block">
           Huy hiệu chuyên môn
         </span>
-        <div className="flex gap-4 md:gap-8 flex-wrap">
+        <div className="flex gap-[16px] items-start">
           {badges.map((badge) => (
             <motion.div 
               key={badge.id}
-              whileHover={{ scale: 1.05 }}
-              className={`flex flex-col items-center gap-3 transition-opacity ${!badge.isEarned ? 'opacity-40 grayscale' : ''}`}
+              whileHover={badge.isEarned ? { scale: 1.05 } : {}}
+              className={`flex flex-col items-center gap-[8px] transition-opacity ${!badge.isEarned ? 'opacity-40' : ''}`}
             >
-              <div className="size-16 bg-white rounded-2xl border border-[#c2c6d4]/20 shadow-sm flex items-center justify-center p-4 relative overflow-hidden">
-                <Image
-                  src={badge.iconUrl}
-                  alt={badge.name}
-                  width={32}
-                  height={32}
-                  className="object-contain"
-                />
+              <div className={`size-[64px] bg-white rounded-[12px] border border-[rgba(194,198,212,0.2)] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)] flex items-center justify-center p-px relative ${!badge.isEarned ? 'border-dashed' : 'border-solid'}`}>
+                {badge.iconUrl ? (
+                  <div className="size-[32px] relative">
+                    <Image
+                      src={badge.iconUrl}
+                      alt={badge.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  <div className="text-[#c2c6d4]">
+                    {badge.isEarned ? <Award size={24} /> : <div className="text-[#c2c6d4]/50">🔒</div>}
+                  </div>
+                )}
               </div>
-              <span className="text-[10px] font-medium text-[#191c1e] text-center w-24">
+              <span className="text-[10px] font-medium text-[#191c1e] text-center w-[80px] leading-[15px]">
                 {badge.name}
               </span>
             </motion.div>

@@ -1,4 +1,7 @@
 using backend.ViewModels;
+using backend.Data;
+using backend.Models;
+using Microsoft.EntityFrameworkCore;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -12,52 +15,28 @@ public interface IAuthService
     Task<bool> RegisterAsync(RegisterViewModel model);
 }
 
-public class MockUserEntry
-{
-    public UserProfile Profile { get; set; } = new();
-    public string PasswordHash { get; set; } = string.Empty;
-}
-
 public class AuthService : IAuthService
 {
-    private static readonly List<MockUserEntry> _mockUsers = new()
-    {
-        new MockUserEntry 
-        { 
-            Profile = new UserProfile 
-            { 
-                Id = "1", 
-                Username = "admin", 
-                FullName = "Dr. Aris",
-                Email = "admin@clinic.com",
-                Title = "Nhà sinh học phân tử",
-                Bio = "Chuyên gia phẫu thuật với hơn 10 năm kinh nghiệm trong lĩnh vực tim mạch và nghiên cứu sinh học phân tử ứng dụng.",
-                Location = "TP. Hồ Chí Minh, Việt Nam",
-                AvatarUrl = "http://localhost:3845/assets/f8252123aafbd3e14e03858f8893a98097356e7e.png",
-                CoverImageUrl = "http://localhost:3845/assets/cbab19d8a6c696c7ed821686e4536108d38d5a1e.png",
-                Specialty = "Verified Professional",
-                ResearchArea = "Sinh học phân tử",
-                HighestDegree = "Tiến sĩ Y học (Ph.D)",
-                Organization = "Bệnh viện Đại học Y Dược"
-            },
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword("password123")
-        }
-    };
-
+    private readonly AppDbContext _context;
     private readonly string _jwtKey = "SuperSecretKeyForHealthForumWebsite2026!";
+
+    public AuthService(AppDbContext context)
+    {
+        _context = context;
+    }
 
     public async Task<LoginResponse?> LoginAsync(LoginViewModel model)
     {
-        var userEntry = _mockUsers.FirstOrDefault(u => 
-            (u.Profile.Username == model.Username || u.Profile.Email == model.Username));
+        var user = await _context.Users
+            .FirstOrDefaultAsync(u => u.Username == model.Username || u.Email == model.Username);
 
-        if (userEntry != null && BCrypt.Net.BCrypt.Verify(model.Password, userEntry.PasswordHash))
+        if (user != null && BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
         {
             return new LoginResponse
             {
-                AccessToken = GenerateJwtToken(userEntry.Profile),
-                RefreshToken = "mock.refresh.token.for.now",
-                User = userEntry.Profile
+                AccessToken = GenerateJwtToken(user),
+                RefreshToken = Guid.NewGuid().ToString(), // Proper random refresh token
+                User = MapToProfile(user)
             };
         }
 
@@ -67,25 +46,27 @@ public class AuthService : IAuthService
     public async Task<bool> RegisterAsync(RegisterViewModel model)
     {
         if (model.Password != model.ConfirmPassword) return false;
-        if (_mockUsers.Any(u => u.Profile.Email == model.Email)) return false;
+        
+        // Already exists check
+        if (await _context.Users.AnyAsync(u => u.Email == model.Email || u.Username == model.FullName)) 
+            return false;
 
-        var newUser = new UserProfile
+        var newUser = new User
         {
-            Id = Guid.NewGuid().ToString(),
-            Username = model.FullName,
-            Email = model.Email
+            Username = model.FullName, // Using FullName as Username for simplicity per existing logic
+            Email = model.Email,
+            FullName = model.FullName,
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password),
+            CreatedAt = DateTime.UtcNow
         };
 
-        _mockUsers.Add(new MockUserEntry
-        {
-            Profile = newUser,
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password)
-        });
+        _context.Users.Add(newUser);
+        await _context.SaveChangesAsync();
         
         return true;
     }
 
-    private string GenerateJwtToken(UserProfile user)
+    private string GenerateJwtToken(User user)
     {
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(_jwtKey);
@@ -94,7 +75,7 @@ public class AuthService : IAuthService
         {
             Subject = new ClaimsIdentity(new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.Username),
                 new Claim(ClaimTypes.Email, user.Email)
             }),
@@ -104,5 +85,25 @@ public class AuthService : IAuthService
         
         var token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
+    }
+
+    private UserProfile MapToProfile(User user)
+    {
+        return new UserProfile
+        {
+            Id = user.Id.ToString(),
+            Username = user.Username,
+            Email = user.Email,
+            FullName = user.FullName,
+            Title = user.Title ?? "",
+            Bio = user.Bio ?? "",
+            Location = user.Location ?? "",
+            AvatarUrl = user.AvatarUrl ?? "",
+            CoverImageUrl = user.CoverImageUrl ?? "",
+            Specialty = user.Specialty ?? "",
+            ResearchArea = user.ResearchArea ?? "",
+            HighestDegree = user.HighestDegree ?? "",
+            Organization = user.Organization ?? ""
+        };
     }
 }

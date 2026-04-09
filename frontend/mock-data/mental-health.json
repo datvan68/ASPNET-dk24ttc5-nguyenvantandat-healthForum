@@ -12,14 +12,13 @@
       "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
       "discussionCount": "12.4k",
       "fileCount": "2.1k",
-      "imageUrl": "https://img.freepik.com/free-photo/fresh-salad-with-vegetables-seeds-bowl_23-2148853384.jpg",
-      "icon": "Apple",
+      "imageUrl": "/assets/icon-topic-nutrition.svg",
+      "icon": "/assets/icon-topic-nutrition.svg",
       "variant": "light-illustrated",
       "span": "col-span-12 lg:col-span-6",
       "avatars": [
-        "https://randomuser.me/api/portraits/men/10.jpg",
-        "https://randomuser.me/api/portraits/women/11.jpg",
-        "https://randomuser.me/api/portraits/men/12.jpg"
+        "/assets/topic-nutrition-av-1.png",
+        "/assets/topic-nutrition-av-2.png"
       ]
     },
     {
@@ -29,7 +28,7 @@
       "discussionCount": "12.4k",
       "fileCount": "2.1k",
       "imageUrl": "https://img.freepik.com/free-photo/strong-man-training-gym_23-2148398184.jpg",
-      "icon": "Dumbbell",
+      "icon": "/assets/icon-topic-fitness.svg",
       "variant": "dark-prominent",
       "span": "col-span-12 lg:col-span-6"
     },
@@ -39,8 +38,8 @@
       "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
       "discussionCount": "8.2k",
       "fileCount": "1.5k",
-      "imageUrl": "https://img.freepik.com/free-icon/brain_318-157640.jpg",
-      "icon": "Brain",
+      "imageUrl": "/assets/icon-topic-mental.svg",
+      "icon": "/assets/icon-topic-mental.svg",
       "variant": "minimal",
       "span": "col-span-12 lg:col-span-4"
     },
@@ -50,7 +49,7 @@
       "description": "Chào mừng bạn đến với Aegis Health, một phòng thí nghiệm nghiên cứu cho các cuộc đối thoại y khoa. Tham gia cùng hơn 450.000 thành viên trong việc giải mã tương lai của sự trường thọ thông qua dữ liệu nghiêm ngặt và đối thoại ngang hàng.",
       "discussionCount": "5.6k",
       "fileCount": "0.9k",
-      "imageUrl": "https://img.freepik.com/free-photo/scientist-working-modern-laboratory_23-2148853399.jpg",
+      "imageUrl": "/assets/topic-research-img.png",
       "icon": "Zap",
       "badge": "LATEST RESEARCH",
       "variant": "horizontal-wide",
@@ -65,7 +64,7 @@
       "author": {
         "fullName": "Dr. Elena Vance",
         "title": "Endocrinologist",
-        "avatarUrl": "https://randomuser.me/api/portraits/women/12.jpg"
+        "avatarUrl": "/assets/avatar-elena-vance.png"
       },
       "tags": [
         "Verified Expert"
