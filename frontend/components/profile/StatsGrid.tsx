@@ -10,7 +10,7 @@ import { useIsMounted } from "@/hooks/useIsMounted";
 interface Badge {
   id: number;
   name: string;
-  iconUrl: string;
+  iconUrl: string | null;
   isEarned: boolean;
 }
 

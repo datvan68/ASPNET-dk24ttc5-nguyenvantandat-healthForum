@@ -1,11 +1,11 @@
-import { ResearchSidebar } from "@/components/research/ResearchSidebar";
-import { ResearchContent } from "@/components/research/ResearchContent";
-import { CommentSection } from "@/components/research/CommentSection";
+import { ResearchSidebar } from "@/components/articles/ResearchSidebar";
+import { ResearchContent } from "@/components/articles/ResearchContent";
+import { CommentSection } from "@/components/articles/CommentSection";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
-import researchData from "@/mock-data/research.json";
+import articleData from "@/mock-data/articles.json";
 
 export default function ResearchPage() {
-  const { article, comments } = researchData;
+  const { article, comments } = articleData;
 
   return (
     <main className="min-h-screen bg-[#f7f9fb] pt-24 pb-20">
@@ -14,7 +14,7 @@ export default function ResearchPage() {
         {/* Breadcrumbs */}
         <Breadcrumbs 
           items={[
-            { label: "Nghiên cứu"},
+            { label: "Bài viết"},
           ]} 
           className="mb-0" 
         />

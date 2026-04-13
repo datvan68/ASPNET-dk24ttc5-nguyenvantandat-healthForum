@@ -60,7 +60,7 @@ export function Header() {
             { label: "Dinh dưỡng", href: "/nutrition" },
             { label: "Thể hình", href: "/fitness" },
             { label: "Sức khỏe tâm thần", href: "/mental-health" },
-            { label: "Nghiên cứu", href: "/research" }
+            { label: "Bài viết", href: "/articles" }
           ].map((item) => {
             const isActive = pathname === item.href;
             return (

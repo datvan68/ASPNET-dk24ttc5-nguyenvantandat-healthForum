@@ -17,9 +17,9 @@ interface ProfileHeroProps {
   bio: string;
   location: string;
   joinDate: string;
-  locationIconUrl?: string; // New
-  joinIconUrl?: string; // New
-  editIconUrl?: string; // New
+  locationIconUrl?: string | null; // New
+  joinIconUrl?: string | null; // New
+  editIconUrl?: string | null; // New
 }
 
 export function ProfileHero({

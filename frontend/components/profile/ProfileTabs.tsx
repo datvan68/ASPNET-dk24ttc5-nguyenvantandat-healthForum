@@ -13,8 +13,8 @@ interface Post {
   createdAt: string;
   commentCount: number;
   likeCount: number;
-  commentIconUrl?: string;
-  likeIconUrl?: string;
+  commentIconUrl?: string | null;
+  likeIconUrl?: string | null;
 }
 
 interface ProfileTabsProps {
