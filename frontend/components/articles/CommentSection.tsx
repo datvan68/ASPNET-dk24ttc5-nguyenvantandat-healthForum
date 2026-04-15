@@ -1,21 +1,21 @@
 "use client";
 
 import React from "react";
-import { MessageSquare, Heart, CornerRightDown, MoreHorizontal, Send, Bold, Italic, Link as LinkIcon, Image as ImageIcon } from "lucide-react";
+import { MessageSquare, Heart, CornerRightDown, Send, Bold, Italic, Link as LinkIcon, Image as ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface Comment {
   id: string;
   author: {
     name: string;
     avatar: string;
-    isVerified?: boolean;
-    isAuthor?: boolean;
+    title?: string;
+    roleBadge?: string;
   };
   time: string;
   content: string;
   likes: number;
-  replies?: Comment[];
 }
 
 interface CommentSectionProps {
@@ -23,58 +23,49 @@ interface CommentSectionProps {
   totalComments: number;
 }
 
-function CommentItem({ comment, isReply = false }: { comment: Comment; isReply?: boolean }) {
+function CommentItem({ comment }: { comment: Comment }) {
   return (
-    <div className={cn("flex gap-4 w-full", isReply && "pl-8 md:pl-12")}>
-      <div className={cn("shrink-0", isReply ? "w-8 h-8" : "w-10 h-10")}>
-        <div className="rounded-xl overflow-hidden border-2 border-white shadow-sm w-full h-full">
+    <div className="flex gap-6 w-full">
+      <div className="shrink-0 w-12 h-12">
+        <div className="rounded-2xl overflow-hidden border-2 border-white shadow-md w-full h-full">
           <img src={comment.author.avatar} alt={comment.author.name} className="w-full h-full object-cover" />
         </div>
       </div>
       
-      <div className="flex-grow flex flex-col gap-2">
-        <div className={cn(
-          "bg-[#f2f4f6] rounded-bl-2xl rounded-br-2xl rounded-tr-2xl p-5 border border-transparent",
-          comment.author.isAuthor && "bg-[#e6e8ea] border-[#003f87]/10"
-        )}>
-          <div className="flex items-center justify-between mb-2">
-            <div className="flex items-center gap-2">
-              <span className="font-bold text-[#003f87] text-sm">{comment.author.name}</span>
-              {comment.author.isVerified && (
-                <div className="bg-[#80f98b] px-2 py-0.5 rounded-full">
-                  <span className="text-[#007327] text-[8px] font-bold uppercase tracking-tighter">Verified Expert</span>
-                </div>
-              )}
-              {comment.author.isAuthor && (
-                <div className="bg-[#003f87] px-2 py-0.5 rounded-sm">
-                  <span className="text-white text-[8px] font-bold uppercase">Tác giả</span>
-                </div>
+      <div className="flex-grow flex flex-col gap-4">
+        <div className="bg-white rounded-2xl p-8 border border-[rgba(30,58,138,0.05)] shadow-sm">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-3">
+                <span className="font-extrabold text-[#191c1e] text-base">{comment.author.name}</span>
+                {comment.author.roleBadge && (
+                  <div className="bg-[#80f98b] px-3 py-1 rounded-md">
+                    <span className="text-[#007327] text-[9px] font-bold uppercase tracking-wider">{comment.author.roleBadge}</span>
+                  </div>
+                )}
+              </div>
+              {comment.author.title && (
+                <span className="text-[#727784] text-[12px] font-medium">{comment.author.title}</span>
               )}
             </div>
-            <span className="text-[#727784] text-xs">{comment.time}</span>
+            <span className="text-[#727784] text-[13px] font-medium">{comment.time}</span>
           </div>
           
-          <p className="text-sm text-[#191c1e] leading-relaxed">
+          <p className="text-[#191c1e] text-[16px] leading-[1.6] font-medium">
             {comment.content}
           </p>
-        </div>
 
-        <div className="flex items-center gap-6 px-1">
-          <button className="flex items-center gap-1.5 text-xs font-semibold text-[#727784] hover:text-[#003f87] transition-colors">
-            <Heart size={14} />
-            {comment.likes}
-          </button>
-          <button className="text-xs font-semibold text-[#727784] hover:text-[#003f87] transition-colors">
-            Trả lời
-          </button>
-          <button className="text-xs font-semibold text-[#727784] hover:text-[#003f87] transition-colors">
-            Báo cáo
-          </button>
+          <div className="flex items-center gap-6 mt-8 pt-6 border-t border-[#eceef0]">
+            <button className="flex items-center gap-2 text-sm font-bold text-[#424752] hover:text-[#003f87] transition-colors group">
+              <CornerRightDown size={18} className="text-[#003f87] group-hover:scale-110 transition-transform" />
+              Phản hồi
+            </button>
+            <button className="flex items-center gap-2 text-sm font-bold text-[#424752] hover:text-[#ff4d4d] transition-colors group">
+              <Heart size={18} className="text-[#ff4d4d] group-hover:scale-110 transition-transform" />
+              {comment.likes}
+            </button>
+          </div>
         </div>
-
-        {comment.replies && comment.replies.map(reply => (
-          <CommentItem key={reply.id} comment={reply} isReply={true} />
-        ))}
       </div>
     </div>
   );
@@ -82,47 +73,39 @@ function CommentItem({ comment, isReply = false }: { comment: Comment; isReply?:
 
 export function CommentSection({ comments, totalComments }: CommentSectionProps) {
   return (
-    <div className="w-full flex flex-col gap-8 py-8 border-t border-[rgba(194,198,212,0.15)] mt-12">
-      <div className="flex items-end justify-between">
-        <h3 className="text-2xl font-bold text-[#003f87]">Thảo luận ({totalComments})</h3>
-        <div className="flex items-center gap-2">
-          <span className="text-[#424752] text-sm">Sắp xếp theo:</span>
-          <button className="text-[#003f87] text-sm font-semibold flex items-center gap-1">
-            Phù hợp nhất
-            <CornerRightDown size={14} />
-          </button>
-        </div>
+    <div className="w-full flex flex-col gap-10 py-12 border-t border-[#eceef0] mt-16">
+      <div className="flex items-end justify-between px-2">
+        <h3 className="text-2xl font-extrabold text-[#191c1e]">Thảo luận chuyên môn</h3>
       </div>
 
       {/* New Comment Input */}
-      <div className="bg-[#f2f4f6] border border-[rgba(194,198,212,0.1)] rounded-xl p-6 flex flex-col gap-4">
+      <div className="bg-[#f7f9fb] border border-[rgba(194,198,212,0.1)] rounded-2xl p-8 shadow-inner flex flex-col gap-6">
         <textarea 
-          placeholder="Chia sẻ kinh nghiệm lâm sàng hoặc đặt câu hỏi..."
-          className="bg-transparent border-none focus:ring-0 w-full min-h-[100px] text-base text-[#191c1e] placeholder-[#c2c6d4] resize-none"
+          placeholder="Viết bình luận chuyên môn của bạn..."
+          className="bg-transparent border-none focus:ring-0 w-full min-h-[120px] text-[17px] text-[#191c1e] placeholder-[#727784] resize-none font-medium leading-relaxed"
         />
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between border-t border-[#eceef0] pt-6">
           <div className="flex items-center gap-2">
-            <button className="p-2 text-[#727784] hover:bg-white/50 rounded-lg transition-colors"><Bold size={18} /></button>
-            <button className="p-2 text-[#727784] hover:bg-white/50 rounded-lg transition-colors"><Italic size={18} /></button>
-            <button className="p-2 text-[#727784] hover:bg-white/50 rounded-lg transition-colors"><ImageIcon size={18} /></button>
-            <button className="p-2 text-[#727784] hover:bg-white/50 rounded-lg transition-colors"><LinkIcon size={18} /></button>
+            <button className="p-2.5 text-[#727784] hover:bg-white hover:shadow-sm rounded-xl transition-all"><Bold size={20} /></button>
+            <button className="p-2.5 text-[#727784] hover:bg-white hover:shadow-sm rounded-xl transition-all"><Italic size={20} /></button>
+            <button className="p-2.5 text-[#727784] hover:bg-white hover:shadow-sm rounded-xl transition-all"><ImageIcon size={20} /></button>
+            <button className="p-2.5 text-[#727784] hover:bg-white hover:shadow-sm rounded-xl transition-all"><LinkIcon size={20} /></button>
           </div>
-          <button className="bg-gradient-to-br from-[#003f87] to-[#0056b3] text-white px-8 py-2 rounded-lg font-semibold text-sm hover:scale-[1.02] transition-transform flex items-center gap-2 shadow-md">
+          <Button className="bg-[#003f87] hover:bg-[#0052cc] text-white px-10 py-3 rounded-xl font-bold text-base transition-all shadow-md">
             Gửi bình luận
-            <Send size={16} />
-          </button>
+          </Button>
         </div>
       </div>
 
       {/* Comments List */}
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-10 mt-4">
         {comments.map(comment => (
           <CommentItem key={comment.id} comment={comment} />
         ))}
       </div>
 
-      <button className="w-full py-4 border border-[rgba(194,198,212,0.15)] rounded-xl text-[#003f87] font-bold text-base hover:bg-white/5 transition-colors">
-        Tải thêm thảo luận
+      <button className="w-full py-5 border border-[#eceef0] rounded-2xl text-[#003f87] font-extrabold text-[17px] hover:bg-white hover:shadow-sm transition-all mt-6">
+        Xem tất cả thảo luận ({totalComments})
       </button>
     </div>
   );

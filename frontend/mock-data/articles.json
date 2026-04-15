@@ -1,38 +1,116 @@
 {
+  "articles": [
+    {
+      "id": "metabolic-flexibility",
+      "title": "Sự linh hoạt trong trao đổi chất: Những hiểu biết lâm sàng mới về nhịp sinh học và sự ổn định của Glucose",
+      "slug": "metabolic-flexibility",
+      "date": "12 Oct, 2024",
+      "category": "Trao đổi chất",
+      "snippet": "Nghiên cứu hiện tại cho thấy khả năng cơ thể chuyển đổi giữa các nguồn nhiên liệu—glucose và axit béo—phần lớn được điều phối bởi đồng hồ sinh học nội tại của chúng ta. Trong quan sát lâm sàng mới nhất tại Atelier...",
+      "featuredImage": "https://img.freepik.com/free-photo/scientist-working-modern-laboratory_23-2148754116.jpg",
+      "author": {
+        "name": "Dr. Elias Aris",
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+      },
+      "stats": {
+        "views": "12.4k",
+        "comments": 42
+      }
+    },
+    {
+      "id": "microbiome-immunotherapy",
+      "title": "Ảnh hưởng của đa dạng hệ vi sinh vật đến hiệu quả điều trị bằng thuốc Immunotherapy",
+      "slug": "microbiome-immunotherapy",
+      "date": "08 Oct, 2024",
+      "category": "Y học chính xác",
+      "snippet": "Các thử nghiệm lâm sàng giai đoạn II cho thấy sự thay đổi rõ rệt trong phản ứng của bệnh nhân dựa trên thành phần vi khuẩn đường ruột trước khi điều trị. Chúng tôi phân tích sự giao thoa này...",
+      "featuredImage": "https://img.freepik.com/free-photo/scientific-discovery-concept_23-2148897582.jpg",
+      "author": {
+        "name": "Dr. Sarah Chen",
+        "avatar": "https://randomuser.me/api/portraits/women/65.jpg"
+      },
+      "stats": {
+        "views": "8.9k",
+        "comments": 15
+      }
+    },
+    {
+      "id": "ai-biological-aging",
+      "title": "Sử dụng AI trong dự đoán lão hóa sinh học: Từ nghiên cứu đến thực hành",
+      "slug": "ai-biological-aging",
+      "date": "30 Sep, 2024",
+      "category": "Trường thọ",
+      "snippet": "Các thuật toán học máy mới có thể ước tính tuổi sinh học với độ chính xác chưa từng có bằng cách kết hợp proteomic và phân tích kiểu hình kỹ thuật số. Điều này có ý nghĩa gì đối với bệnh nhân?",
+      "featuredImage": "https://img.freepik.com/free-photo/young-scientist-working-lab_23-2148814247.jpg",
+      "author": {
+        "name": "Dr. Elias Aris",
+        "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+      },
+      "stats": {
+        "views": "6.2k",
+        "comments": 28
+      }
+    }
+  ],
   "article": {
     "id": "metabolic-flexibility",
     "title": "Sự linh hoạt trong trao đổi chất: Những hiểu biết lâm sàng mới về nhịp sinh học và sự ổn định của Glucose",
-    "lastUpdated": "Oct 12, 2024",
-    "views": "12.4k",
-    "category": "Chuyên gia đã xác minh",
+    "lastUpdated": "12 Tháng 10, 2024",
+    "views": "1,248",
+    "saves": "84",
+    "category": "NGHIÊN CỨU LÂM SÀNG",
     "featuredImage": "https://img.freepik.com/free-photo/scientist-working-modern-laboratory_23-2148754116.jpg",
     "author": {
       "name": "Dr. Elias Aris",
-      "role": "Trưởng nhóm lâm sàng",
-      "bio": "Chuyên sâu về sức khỏe trao đổi chất và nghiên cứu sự trường thọ. Đóng góp biên tập cho Hội đồng Nghiên cứu Clinical Atelier.",
+      "role": "TRƯỞNG KHOA NỘI TIẾT, VIỆN AEGIS",
+      "bio": "Chuyên gia nội tiết với hơn 15 năm kinh nghiệm nghiên cứu cứu về bệnh tiểu đường và hội chứng chuyển hóa.",
       "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
     },
-    "participants": [
-      "https://randomuser.me/api/portraits/men/44.jpg",
-      "https://randomuser.me/api/portraits/women/45.jpg"
-    ],
     "content": {
-      "quote": "Giao điểm giữa thời gian và quá trình xử lý sinh học là ranh giới tiếp theo trong độ chính xác của quá trình trao đổi chất.",
-      "intro": "Nghiên cứu hiện tại cho thấy khả năng cơ thể chuyển đổi giữa các nguồn nhiên liệu— glucose và axit béo—phần lớn được điều phối bởi đồng hồ sinh học nội tại của chúng ta. Trong quan sát lâm sàng mới nhất tại Atelier, chúng tôi nhận thấy có mối tương quan đáng kể giữa các đợt tăng glucose vào cuối buổi tối và các dấu hiệu viêm hệ thống.",
+      "summary": "Nghiên cứu này khám phá mối liên hệ mật thiết giữa cơ chế điều chỉnh nhịp sinh học và khả năng duy trì mức glucose ổn định của cơ thể thông qua sự linh hoạt trao đổi chất. Chúng tôi chứng minh rằng việc tối ưu hóa thời gian hấp thụ dinh dưỡng theo đồng hồ sinh học có thể cải thiện đáng kể độ nhạy insulin.",
       "methodology": {
         "title": "Phương pháp nghiên cứu",
-        "description": "Trong khoảng thời gian sáu tháng, chúng tôi đã theo dõi 240 người tham gia bằng máy theo dõi glucose liên tục (CGM) kết hợp với theo dõi giấc ngủ. Kết quả rất rõ rệt: những đối tượng tiêu thụ 70% lượng calo hàng ngày trước 2:00 chiều có độ nhạy insulin cao hơn 30% so với nhóm đối chứng.",
         "points": [
-          "Khung giờ ngủ chuẩn từ 7-8 tiếng.",
-          "Theo dõi nghiêm ngặt tỷ lệ carbohydrate trên chất xơ.",
-          "Phân tích huyết thanh cho các cytokine gây viêm mỗi 14 ngày."
+          "Theo dõi 150 bệnh nhân trong độ tuổi từ 30-55 có dấu hiệu kháng insulin nhẹ trong vòng 24 tuần.",
+          "Sử dụng thiết bị theo dõi glucose liên tục (CGM) để ghi nhận các biến động trong suốt chu kỳ 24 giờ.",
+          "Phân tích các chỉ số nội tiết tố theo thời gian thực, bao gồm Cortisol và Melatonin vào các thời điểm cố định.",
+          "Áp dụng chế độ ăn uống giới hạn thời gian (TRE) 10:14 đối với nhóm thử nghiệm chính."
         ],
-        "conclusion": "Việc \"nạp năng lượng ưu tiên\" này phù hợp với các mô hình sinh học tổ tiên mà chúng ta đã rời xa trong kỷ nguyên hiện đại của ánh sáng nhân tạo và sự tương tác kỹ thuật số đêm khuya."
+        "conclusion": "Dữ liệu cho thấy sự gián đoạn nhịp sinh học dẫn đến suy giảm đáng kể khả năng oxy hóa lipid và làm trầm trọng thêm tình trạng tăng đường huyết sau ăn. Kết quả nghiên cứu khẳng định rằng \"thời điểm ăn\" quan trọng không kém gì \"thành phần thức ăn\" trong việc quản lý sức khỏe chuyển hóa lâu dài. Sự linh hoạt trao đổi chất có thể được phục hồi thông qua việc đồng bộ hóa thói quen sinh hoạt với nhịp điệu tự nhiên của cơ thể."
       }
     },
+    "relatedTopics": [
+      "Nhịp sinh học", "Kháng Insulin", "Y học chính xác", "Dinh dưỡng lâm sàng", "Glucose máu"
+    ],
+    "relatedArticles": [
+      {
+        "id": "a1",
+        "label": "JOURNAL VOL. 42",
+        "title": "Tác động của Melatonin đối với việc kiểm soát Glycemic vào ban đêm",
+        "author": "Dr. Marcus Thorne",
+        "readTime": "5 phút đọc",
+        "slug": "metabolic-flexibility"
+      },
+      {
+        "id": "a2",
+        "label": "ARCHIVE 2023",
+        "title": "Cơ chế tự thực (Autophagy) và sự nhạy cảm của tế bào Beta",
+        "author": "Dr. Elena Kostic",
+        "readTime": "8 phút đọc",
+        "slug": "microbiome-immunotherapy"
+      },
+      {
+        "id": "a3",
+        "label": "LATEST UPDATES",
+        "title": "Tổng quan về các thiết bị theo dõi Glucose liên tục thế hệ mới",
+        "author": "Biotech Review",
+        "readTime": "12 phút đọc",
+        "slug": "ai-biological-aging"
+      }
+    ],
     "stats": {
       "likes": 1248,
-      "comments": 42
+      "comments": 84
     }
   },
   "comments": [
@@ -41,24 +119,12 @@
       "author": {
         "name": "Dr. Sarah Chen",
         "avatar": "https://randomuser.me/api/portraits/women/65.jpg",
-        "isVerified": true
+        "title": "Đại học Y khoa Stanford",
+        "roleBadge": "CHUYÊN GIA PHẢN BIỆN"
       },
-      "time": "2h ago",
-      "content": "This mirrors what we're seeing in the longevity clinic in SF. Have you controlled for the 'Dawn Phenomenon' in patients who have pre-existing insulin resistance? In those cases, even early eating doesn't seem to blunt the AM spike.",
-      "likes": 14,
-      "replies": [
-        {
-          "id": "c2",
-          "author": {
-            "name": "Dr. Elias Aris",
-            "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
-            "isAuthor": true
-          },
-          "time": "45m ago",
-          "content": "Excellent point, Sarah. In the pre-IR cohort, we actually implemented a low-impact 10-minute walk post-waking before the first meal, which seemed to provide the metabolic nudge needed to stabilize the AM spike. We'll be publishing the data on that specific intervention next month.",
-          "likes": 8
-        }
-      ]
+      "time": "2 giờ trước",
+      "content": "Cảm ơn Dr. Elias về nghiên cứu rất chuyên sâu. Tuy nhiên, tôi muốn đặt câu hỏi về biến số \"chất lượng giấc ngủ\" trong nhóm thử nghiệm. Liệu các bạn có kiểm soát được tình trạng ngưng thở khi ngủ hoặc các rối loạn giấc ngủ tiềm ẩn có thể ảnh hưởng đến chỉ số Cortisol sáng sớm, từ đó làm nhiễu kết quả về sự linh hoạt trao đổi chất không? Dữ liệu về Melatonin dường như chưa đủ mạnh để loại trừ tác động này.",
+      "likes": 12
     }
   ]
 }
