@@ -66,7 +66,7 @@ export function PostCard({
 
       <div className="mt-auto pt-4 border-t border-[rgba(194,198,212,0.1)] flex gap-6 items-center">
         <div className="flex items-center gap-1.5 text-[#424752] text-xs font-semibold">
-          {commentIconUrl ? (
+          {commentIconUrl && commentIconUrl.trim() !== "" ? (
             <Image src={commentIconUrl} alt="Comments" width={13.333} height={13.333} />
           ) : (
             <MessageSquare size={14} className="text-[#424752]" />
@@ -74,7 +74,7 @@ export function PostCard({
           <span>{commentCount} Bình luận</span>
         </div>
         <div className="flex items-center gap-1.5 text-[#424752] text-xs font-semibold">
-          {likeIconUrl ? (
+          {likeIconUrl && likeIconUrl.trim() !== "" ? (
             <Image src={likeIconUrl} alt="Likes" width={14} height={13.333} />
           ) : (
             <ThumbsUp size={14} className="text-[#424752]" />

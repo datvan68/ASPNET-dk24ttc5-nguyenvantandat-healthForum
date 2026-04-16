@@ -27,7 +27,7 @@ export default function ProfileBannerEdit({ user }: ProfileBannerEditProps) {
         onMouseLeave={() => setHoverCover(false)}
       >
         <img 
-          src={user?.coverImageUrl || "/assets/avatar-doctor.png"} 
+          src={user?.coverImageUrl && user.coverImageUrl.trim() !== "" ? user.coverImageUrl : "https://images.unsplash.com/photo-1576091160550-217359f4b08d?auto=format&fit=crop&q=80&w=1440"} 
           alt="Cover" 
           className="w-full h-full object-cover"
         />
@@ -60,7 +60,7 @@ export default function ProfileBannerEdit({ user }: ProfileBannerEditProps) {
           <div className="w-32 h-32 rounded-[12px] bg-white p-1 shadow-[0_20px_25px_-5px_theme(colors.black/0.1),0_8px_10px_-6px_theme(colors.black/0.1)]">
             <div className="w-full h-full overflow-hidden rounded-[8px]">
               <img 
-                src={user?.avatarUrl || "http://localhost:3845/assets/f8252123aafbd3e14e03858f8893a98097356e7e.png"} 
+                src={user?.avatarUrl && user.avatarUrl.trim() !== "" ? user.avatarUrl : `https://ui-avatars.com/api/?name=${encodeURIComponent(user?.fullName || "User")}&background=003f87&color=fff&size=128`} 
                 alt="Avatar" 
                 className="w-full h-full object-cover"
               />

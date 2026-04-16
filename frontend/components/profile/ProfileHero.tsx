@@ -36,6 +36,9 @@ export function ProfileHero({
   joinIconUrl,
   editIconUrl,
 }: ProfileHeroProps) {
+  const defaultAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(fullName)}&background=003f87&color=fff&size=160`;
+  const defaultCover = "https://images.unsplash.com/photo-1576091160550-217359f4b08d?auto=format&fit=crop&q=80&w=1440";
+
   return (
     <section className="relative w-full pb-[64px]">
       {/* Cover Image */}
@@ -46,7 +49,7 @@ export function ProfileHero({
         className="relative h-[256px] w-full overflow-hidden rounded-lg"
       >
         <Image
-          src={coverImageUrl}
+          src={coverImageUrl && coverImageUrl.trim() !== "" ? coverImageUrl : defaultCover}
           alt="Profile Cover"
           fill
           className="object-cover"
@@ -66,7 +69,7 @@ export function ProfileHero({
         >
           <div className="relative size-full overflow-hidden rounded-[4px]">
             <Image
-              src={avatarUrl}
+              src={avatarUrl && avatarUrl.trim() !== "" ? avatarUrl : defaultAvatar}
               alt={fullName}
               fill
               className="object-cover"
