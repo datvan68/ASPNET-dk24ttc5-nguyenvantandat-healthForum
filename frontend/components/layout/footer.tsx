@@ -66,13 +66,42 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[#64748b] text-xs font-medium tracking-tight">
-            © 2024 Clinical Atelier. All rights reserved.
-          </p>
-          <div className="flex gap-8">
-            <button className="text-[#64748b] text-[10px] font-bold uppercase tracking-widest hover:text-white transition-all">Điều khoản</button>
-            <button className="text-[#64748b] text-[10px] font-bold uppercase tracking-widest hover:text-white transition-all">Bảo mật</button>
+        <div className="pt-8 border-t border-white/10 flex flex-col gap-4">
+          {/* Author Info */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+            <div className="flex flex-col gap-1">
+              <p className="text-[#d7e2ff] text-xs font-bold uppercase tracking-[1.5px]">Chuyên đề tốt nghiệp · Năm học 2025</p>
+              <p className="text-[#94a3b8] text-sm font-medium">
+                Xây dựng Website Diễn đàn Sức khoẻ — <span className="text-white font-semibold">Nguyễn Văn Tấn Đạt</span>
+              </p>
+            </div>
+            <div className="flex items-center gap-6">
+              <div className="text-center">
+                <p className="text-[#64748b] text-[10px] uppercase tracking-widest font-bold">MSSV</p>
+                <p className="text-[#94a3b8] text-xs font-mono font-semibold">170124525</p>
+              </div>
+              <div className="w-px h-6 bg-white/10" />
+              <div className="text-center">
+                <p className="text-[#64748b] text-[10px] uppercase tracking-widest font-bold">Lớp</p>
+                <p className="text-[#94a3b8] text-xs font-semibold">DK24TTC5</p>
+              </div>
+              <div className="w-px h-6 bg-white/10" />
+              <div className="text-center">
+                <p className="text-[#64748b] text-[10px] uppercase tracking-widest font-bold">Trường</p>
+                <p className="text-[#94a3b8] text-xs font-semibold">ĐH Trà Vinh</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-4 border-t border-white/5">
+            <p className="text-[#64748b] text-xs font-medium tracking-tight">
+              © 2026 Clinical Atelier · GVHD: ThS. Đoàn Phước Miền · Khoa KT&CN, Trường ĐH Trà Vinh
+            </p>
+            <div className="flex gap-8">
+              <button className="text-[#64748b] text-[10px] font-bold uppercase tracking-widest hover:text-white transition-all">Điều khoản</button>
+              <button className="text-[#64748b] text-[10px] font-bold uppercase tracking-widest hover:text-white transition-all">Bảo mật</button>
+            </div>
           </div>
         </div>
       </div>

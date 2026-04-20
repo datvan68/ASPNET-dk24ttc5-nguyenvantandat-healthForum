@@ -17,7 +17,7 @@ public static class ServiceCollectionExtensions
             options.UseMySQL(connectionString);
         });
 
-        services.AddSingleton<ForumRepository>();
+
         services.AddSingleton<HealthService>();
         services.AddScoped<IAuthService, AuthService>();
 
